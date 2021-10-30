@@ -1,0 +1,30 @@
+html {
+    padding: 24px;
+}
+
+body {
+    margin: auto;
+    max-width: 1200px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 18px;
+    color: #000;
+    background-color: #fff;
+}
+
+header {
+    text-align: center;
+}
+
+#projects-nav {
+    border: 3px dashed blue;
+    border-radius: 16px;
+    padding: 6px 32px;
+}
+
+a {
+    word-wrap: break-word;
+}
+
+.nobreak {
+    white-space: nowrap;
+}

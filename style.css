@@ -1,14 +1,12 @@
 html {
-    padding: 24px;
+    padding: 18px;
 }
 
 body {
     margin: auto;
     max-width: 1200px;
     font-family: "Courier New", Courier, monospace;
-    font-size: 18px;
-    color: #000;
-    background-color: #fff;
+    font-size: 16px;
 }
 
 header {
@@ -16,7 +14,7 @@ header {
 }
 
 #projects-nav {
-    border: 3px dashed blue;
+    border: 3px dashed deepskyblue;
     border-radius: 16px;
     padding: 6px 32px;
 }
@@ -27,4 +25,24 @@ a {
 
 .nobreak {
     white-space: nowrap;
+}
+
+
+/* Dark mode stuff */
+@media (prefers-color-scheme: light) {
+    body {
+        color: #000;
+        background-color: #fff;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #fff;
+        background-color: #222;
+    }
+
+    a {
+        color: #00fff7;
+    }
 }

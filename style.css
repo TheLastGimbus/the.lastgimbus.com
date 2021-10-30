@@ -9,7 +9,6 @@ body {
     font-size: 18px;
     color: #000;
     background-color: #fff;
-    word-wrap: break-word;
 }
 
 header {
@@ -20,4 +19,8 @@ header {
     border: 3px dashed blue;
     border-radius: 16px;
     padding: 6px 32px;
+}
+
+a {
+    word-wrap: break-word;
 }

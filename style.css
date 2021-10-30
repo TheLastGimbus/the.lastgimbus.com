@@ -1,7 +1,7 @@
 body {
     margin: 24px;
     font-family: "Courier New", Courier, monospace;
-    font-size: 18px;
+    font-size: 20px;
     color: #000;
     background-color: #fff;
 }
@@ -12,7 +12,6 @@ header {
 
 #projects-nav {
     border: 3px dashed blue;
-    padding: 10px 64px;
-    display: inline-block;
-    font-size: 110%;
+    border-radius: 16px;
+    padding: 6px 32px;
 }

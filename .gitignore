@@ -1,4 +1,6 @@
 .idea/
 .vscode/
 
+_gen/
+
 unifuck/

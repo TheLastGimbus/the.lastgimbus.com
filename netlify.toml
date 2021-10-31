@@ -1,2 +1,26 @@
-[[plugins]]
-package = "@netlify/plugin-sitemap"
+# [[plugins]]
+# This doesn't seem to work:
+# package = "@netlify/plugin-sitemap"
+
+[build]
+publish = "public"
+command = "hugo --gc --minify"
+
+# Production deploy
+[context.production.environment]
+  HUGO_VERSION = "0.88.1"
+  HUGO_ENV = "production"
+
+# Deploy preview
+[context.deploy-preview]
+command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+
+[context.deploy-preview.environment]
+  HUGO_VERSION = "0.88.1"
+
+# Branch deploy
+[context.branch-deploy]
+command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+
+[context.branch-deploy.environment]
+  HUGO_VERSION = "0.88.1"

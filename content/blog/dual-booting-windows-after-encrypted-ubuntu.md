@@ -1,7 +1,7 @@
 ---
 title: "Dual booting Windows *after* encrypted Ubuntu"
 date: 2021-12-02T22:33:24+01:00
-draft: true
+draft: false
 ---
 
 Hi there 👋! Soo, this is first post ever 🤭! But don't worry, I won't overwhelm this post with any introductions and will just jump to the point 🎉

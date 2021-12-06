@@ -51,7 +51,7 @@ pre.chroma {
     }
 
     p code, pre.chroma {
-        background-color: #eee;
+        background-color: #ececec;
     }
 
     .highlight {
@@ -71,7 +71,7 @@ pre.chroma {
     }
 
     p code, pre.chroma {
-        background-color: #333;
+        background-color: #3b3b3b;
     }
 
     .highlight {

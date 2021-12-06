@@ -1,3 +1,6 @@
 {{ define "main" }}
-<p>Dzieńdoberek oto lista</p>
+{{ .Content }}
+{{ range .Pages }}
+<a href="{{ .RelPermalink }}">{{ .Title }}</a> <span>{{ .Date.Format "2006-01-02" }}</span><br/><br/>
+{{ end }}
 {{ end }}

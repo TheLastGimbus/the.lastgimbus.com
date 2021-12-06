@@ -1,3 +1,18 @@
 {{ define "main" }}
 {{ .Content }}
 {{ end }}
+
+{{/* Only display this on index.html */}}
+{{/* TODO: Potentially move this somewhere else. I'm experimenting now :) */}}
+{{ define "header_extras" }}
+<nav id="projects-nav">
+    <p id="projects-links">
+        Some of my projects:
+        |
+        <a class="nobreak" href="/rollplay/">Roll-API 🎲</a>
+        |
+        <a class="nobreak" href="/unifuck/">unifuck 🤬</a>
+        |
+    </p>
+</nav>
+{{ end }}

@@ -3,3 +3,9 @@ languageCode = 'en-us'
 title = 'TheLastGimbus'
 
 enableRobotsTXT = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      # Enables use of <sub> and other html sutff in markdown
+      unsafe = true

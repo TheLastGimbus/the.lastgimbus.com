@@ -9,3 +9,5 @@ enableRobotsTXT = true
     [markup.goldmark.renderer]
       # Enables use of <sub> and other html sutff in markdown
       unsafe = true
+  [markup.highlight]
+    noClasses=false

@@ -10,14 +10,22 @@ If you want to have both Linux and Windows on your PC, you probably already know
 
 But if you already have Ubuntu, and want to add Windows to it, **brace yourself**. If you are paranoiac, and installed Ubuntu **with encryption** like me, then you need to prepare for a long journey ;_; - this is what this post will be about
 
+### Some meta
 I am making this post because when I wanted to do this, I've searched for literally *5 hours* and found *absolutely nothing*, while I thought this is one of the most common situations out there 🤐 - thus, I won't get deep into every single step (how to etch Linux on usb etc) - if you are completely oblivious about this, just Google them 👍
+
+Also, I've pasted most of terminal stuff as-is - with all `user@computer:/home/user#`, and all text that you may not need - just to make that everything matches when you execute it and there are no extra warning prints/whatever
+
+Because of this, this post may seem long/overwhelming, so prepare a notepad to write down where you are and what "magic numbers" you need to remember
 
 ## TL;DR - you *don't* want to do this ;_;
 If you are an Ubuntu soyboy like me and don't have time to mess with partitioning and filesystems, you want to avoid doing this at any chance - unless you don't already have 1000 customizations and 50GB of IDEs installed, you probably want to just back up your stuff, install Windows on clear drive and install Ubuntu afterwards.
 
 <img src="/memes/what-ubuntu-do-you-use.webp" alt="Ubuntu chad meme - found with dotmeme" width="300"/>
 
-If you didn't resign yet, read along
+### Other limitations
+Windows doesn't support LVM at all. So you will be able to mount and use Windows' NTFS partition from Ubuntu, but not the other way around 😞
+
+<big style="display: inline-block; width: 100%; text-align: center">**If you didn't resign yet, read along**</big>
 
 <sub>Ps. If your Ubuntu is not encrypted, it's not *that* bad - you can just pick first tutorial from Google and should be fine. We are talking about encrypted installation from now on</sub>
 

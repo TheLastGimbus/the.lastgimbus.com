@@ -1,6 +1,6 @@
 ---
 title: "Dual booting Windows *after* encrypted Ubuntu"
-date: 2021-12-02T22:33:24+01:00
+date: 2021-12-06T01:56:24+01:00
 draft: false
 ---
 

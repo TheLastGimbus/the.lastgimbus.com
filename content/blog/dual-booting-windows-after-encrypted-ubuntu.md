@@ -13,7 +13,7 @@ But if you already have Ubuntu, and want to add Windows to it, **brace yourself*
 I am making this post because when I wanted to do this, I've searched for literally *5 hours* and found *absolutely nothing*, while I thought this is one of the most common situations out there 🤐 - thus, I won't get deep into every single step (how to etch Linux on usb etc) - if you are completely oblivious about this, just Google them 👍
 
 ## TL;DR - you *don't* want to do this ;_;
-If you are a Ubuntu soyboy like me and don't have time to mess with partitioning and filesystems, you want to avoid doing this at any chance - unless you don't already have 1000 customizations and 50GB of IDEs installed, you probably want to just back up your stuff, install Windows on clear drive and install Ubuntu afterwards.
+If you are an Ubuntu soyboy like me and don't have time to mess with partitioning and filesystems, you want to avoid doing this at any chance - unless you don't already have 1000 customizations and 50GB of IDEs installed, you probably want to just back up your stuff, install Windows on clear drive and install Ubuntu afterwards.
 
 <img src="/blog/dual-booting-windows-after-encrypted-ubuntu/what-ubuntu-do-you-use.webp" alt="Ubuntu chad meme - found with dotmeme" width="300"/>
 
@@ -32,8 +32,8 @@ I did all of this on setup described below. If any of your stuff is different (y
 ## What we need to do
 Windows can't do any of cool "resize other os and install in remaining free space" automatically like most Linux distros - so we will need to do everything manually:
 1. Resize Linux partition to make free unallocated space on disk
-2. Boot up windows installer from USB
-3. Choose free space in windows installer
+2. Boot up Windows installer from USB
+3. Choose free space in Windows installer
 
 But because encrypted ubuntu requires you to use LVM, step 1. will take us some effort
 
@@ -85,7 +85,7 @@ sdb      8:16   1  14.6G  0 disk
 
 From above, figure out which `/dev/sdX` disk is your main, and which `/dev/sdXY` is your main partition - use it instead of mine (`/dev/sda3`) in all steps below
 
-> Note: if you have NVMe disk, it will be named like: first disk=>`/dev/nvme0n1` instead of `/dev/sda` ; second disk=>`/dev/nvme1n1` insdead of `/dev/sdb` etc
+> Note: if you have NVMe disk, it will be named like: first disk=>`/dev/nvme0n1` instead of `/dev/sda` ; second disk=>`/dev/nvme1n1` instead of `/dev/sdb` etc
 
 ### Decrypt LUKS volume and walk around
 Decrypt with your password: `# cryptsetup luksOpen /dev/sda3 cryptdisk`
@@ -159,7 +159,7 @@ root@ubuntu:/home/ubuntu# pvdisplay
   PV UUID               5Ab52d-Y1bw-IcWj-5mvn-VZ0g-j2vx-YcXFHW
 ```
 
-> Note: in case you don't know - MiB stands for mebi bytes - unit where 1KiB (Kibi byte) is well-known 1024 bytes. MB should stand for megabytes, that nowadays are pure-1000 multiplier, but you newer know if you program means MB as new or old standard 😅
+> Note: in case you don't know - MiB stands for mebi-bytes - unit where 1KiB (kibi-byte) is well-known 1024 bytes. MB should stand for megabytes, that nowadays are pure-1000 multiplier, but you newer know if you program means MB as new or old standard 😅
 
 > But at least you can be sure that 1 MiB is 1048576 bytes 👌
 
@@ -184,7 +184,7 @@ root@ubuntu:/home/ubuntu# pvs -v --segments
   /dev/mapper/cryptdisk vgubuntu lvm2 a--  <278.23g 50.04g 70971   244 swap_1     0 linear /dev/mapper/cryptdisk:70971-71214
   /dev/mapper/cryptdisk vgubuntu lvm2 a--  <278.23g 50.04g 71215    11            0 free
 ```
-As you can see, in my case, `root` was shrunk, but `swap_1` was *after* it, and it stayed in it's place
+As you can see, in my case, `root` was shrunk, but `swap_1` was *after* it, and it stayed in its place
 
 <img src="/blog/dual-booting-windows-after-encrypted-ubuntu/what-happens-after-lvresize.webp" alt="What happened after lvresize drawn in paint" height="350px">
 
@@ -198,7 +198,7 @@ We'll do this with
 Start SSize LV     Start Type   PE Ranges                        
     0 58171 root       0 linear /dev/mapper/cryptdisk:0-58170    
 58171 12800            0 free     
-# Begining of swap_1 - our XXXX => 70971
+# Beginning of swap_1 - our XXXX => 70971
 70971   244 swap_1     0 linear /dev/mapper/cryptdisk:70971-71214
 # End of swap_1 - our YYYY => 71215
 71215    11            0 free
@@ -359,15 +359,15 @@ Anyway, here are the links:
 - https://www.microsoft.com/software-download/windows10
 - https://www.microsoft.com/software-download/windows11
 
-### Flashing windows usb
-Most of the popular usb etchers on linux (like balenaEtcher) don't support Windows 😶 you can try WoeUSB, but it's complicated to install etc - if you really need to, Google how to do it, but from what i've seen
+### Flashing Windows usb
+Most of the popular usb etchers on linux (like balenaEtcher) don't support Windows 😶 you can try WoeUSB, but it's complicated to install etc - if you really need to, Google how to do it, but from what I've seen
 - community apt repository is probably outdated
 - [snap](https://snapcraft.io/woe-usb) is also >3 years old
 - `.bash` from their GitHub release has some dependency issues on Ubuntu
 
 Maybe some day they will finally release a `.AppImage` 🤷
 
-...if you have such possibility, just get Rufus on other windows machine 👍👍 https://rufus.ie/
+...if you have such possibility, just get Rufus on other Windows machine 👍👍 https://rufus.ie/
 
 ### Installing
 Just as previously, turn off your computer, smash that DEL button and override boot to USB stick
@@ -383,5 +383,5 @@ When you get to this dialog:
 ## Step 4. - Enjoy the spyware 🥳
 - If you're stuck on one of the steps and some command doesn't want to work - keep trying, don't give up 💪 it took me *literally* ~9 hours to finish all of this - just don't do some ["Yes, do as I say!"](https://youtu.be/0506yDSgU7M?t=597) incident out of frustration 😟
 - If you did the incident, and are currently crying over your lost data, install Gentoo
-- If you've done everything correct, I wish you very happy gaming/using Adobe stuff/other closed-source capitalism stuff 🥳
+- If you've done everything correct, I wish you very happy gaming/using Adobe/other closed-source capitalism stuff 🥳
 

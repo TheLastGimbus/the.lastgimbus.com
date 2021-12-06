@@ -15,7 +15,7 @@ I am making this post because when I wanted to do this, I've searched for litera
 ## TL;DR - you *don't* want to do this ;_;
 If you are an Ubuntu soyboy like me and don't have time to mess with partitioning and filesystems, you want to avoid doing this at any chance - unless you don't already have 1000 customizations and 50GB of IDEs installed, you probably want to just back up your stuff, install Windows on clear drive and install Ubuntu afterwards.
 
-<img src="/blog/dual-booting-windows-after-encrypted-ubuntu/what-ubuntu-do-you-use.webp" alt="Ubuntu chad meme - found with dotmeme" width="300"/>
+<img src="/memes/what-ubuntu-do-you-use.webp" alt="Ubuntu chad meme - found with dotmeme" width="300"/>
 
 If you didn't resign yet, read along
 

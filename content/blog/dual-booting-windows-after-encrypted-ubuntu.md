@@ -20,7 +20,7 @@ Because of this, this post may seem long/overwhelming, so prepare a notepad to w
 ## TL;DR - you *don't* want to do this ;_;
 If you are an Ubuntu soyboy like me and don't have time to mess with partitioning and filesystems, you want to avoid doing this at any chance - unless you don't already have 1000 customizations and 50GB of IDEs installed, you probably want to just back up your stuff, install Windows on clear drive and install Ubuntu afterwards.
 
-<img src="/memes/what-ubuntu-do-you-use.webp" alt="Ubuntu chad meme - found with dotmeme" width="300"/>
+<img src="/memes/what-ubuntu-do-you-use.webp" alt="Ubuntu chad meme - found with dotmeme" width="300px" />
 
 ### Other limitations
 Windows doesn't support LVM at all. So you will be able to mount and use Windows' NTFS partition from Ubuntu, but not the other way around 😞
@@ -194,7 +194,7 @@ root@ubuntu:/home/ubuntu# pvs -v --segments
 ```
 As you can see, in my case, `root` was shrunk, but `swap_1` was *after* it, and it stayed in its place
 
-<img src="/blog/dual-booting-windows-after-encrypted-ubuntu/what-happens-after-lvresize.webp" alt="What happened after lvresize drawn in paint" height="350px">
+<img src="/blog/dual-booting-windows-after-encrypted-ubuntu/what-happens-after-lvresize.webp" alt="What happened after lvresize drawn in paint" width="450px">
 
 We'll do this with 
 ```bash
@@ -341,7 +341,7 @@ root@ubuntu:/home/ubuntu#
 ### WE ARE DONE RESIZING 🎉🎉🎉!!!
 If you calculated everything correctly, you can open gparted/Ubuntu disks and see that you have nice unallocated space 🚀
 
-<img src="/blog/dual-booting-windows-after-encrypted-ubuntu/gparted-showing-unallocated.webp" alt="Gparted showing unallocated space on disk" height="350px">
+<img src="/blog/dual-booting-windows-after-encrypted-ubuntu/gparted-showing-unallocated.webp" alt="Gparted showing unallocated space on disk" width="500px">
 
 You can close Ubuntu and open the champagne 🍾
 
@@ -384,7 +384,7 @@ Then go ahead with your normal windows installation
 
 When you get to this dialog:
 
-<img src="/blog/dual-booting-windows-after-encrypted-ubuntu/windoza-which-type-of-installation-dialog.webp" alt="Which type of installation windows  dialog" height="300px">
+<img src="/blog/dual-booting-windows-after-encrypted-ubuntu/windoza-which-type-of-installation-dialog.webp" alt="Which type of installation windows  dialog" width="500px">
 
 ...make sure to select "Custom: Install windows only", and then select the drive item that matches amount of space you've previously freed
 

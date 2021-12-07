@@ -28,6 +28,11 @@ a {
     word-wrap: break-word;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .nobreak {
     white-space: nowrap;
 }
@@ -35,6 +40,8 @@ a {
 pre.chroma {
     margin: 0px;
     padding: 16px;
+    background-size: cover;
+    overflow-x: auto;
 }
 
 .highlight {

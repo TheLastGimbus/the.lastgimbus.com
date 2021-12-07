@@ -1,5 +1,5 @@
 /* Those were generated with "hugo gen chromastyles --style=STYLE_NAME > syntax_COLOR.css" */
-/* Light style is "emacs", and dark is "monokai" */
+/* Light style is "perldoc", and dark is "fruity" */
 @import "/syntax_light.css" (prefers-color-scheme: light);
 @import "/syntax_dark.css" (prefers-color-scheme: dark);
 
@@ -57,7 +57,7 @@ pre.chroma {
         background-color: #fff;
     }
 
-    p code, pre.chroma {
+    p code {
         background-color: #ececec;
     }
 
@@ -77,7 +77,7 @@ pre.chroma {
         color: #00fff7;
     }
 
-    p code, pre.chroma {
+    p code {
         background-color: #3b3b3b;
     }
 

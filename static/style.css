@@ -24,6 +24,15 @@ header {
     padding: 6px 32px;
 }
 
+/* Make projects-nav float to left when screen size < 800 */
+@media only screen and (min-width: 800px) {
+    #projects-nav {
+        float: left;
+        width: 100px;
+        margin: auto 28px auto auto;
+    }
+}
+
 a {
     word-wrap: break-word;
 }

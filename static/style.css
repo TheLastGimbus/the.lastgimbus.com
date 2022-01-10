@@ -28,7 +28,7 @@ header {
 @media only screen and (min-width: 800px) {
     #projects-nav {
         float: left;
-        width: 100px;
+        width: 140px;
         margin: auto 28px auto auto;
     }
 }

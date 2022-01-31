@@ -19,7 +19,7 @@ Besides being pretty and flashy, it would be awesome if it would also turn out :
 // TODO: Photo of final result
 
 ### What it will do
-I want it to be like a standard light/torch - you have a single button that you click to enable it, then it changes modes, then it turns off. From user perspective, this is blatantly simple. But form electrical/programming side, it may be a challenge.
+I want it to work like a standard light/torch - you have a single button that you click to enable it, then it changes modes, then it turns off. From user perspective, this is blatantly simple. But form electrical/programming side, it may be a challenge.
 
 The modes/functions:
 - some pretty animations like rainbow etc
@@ -29,20 +29,21 @@ The modes/functions:
 - showing battery level
 
 ## Parts
- - For base, I'll use this cheap, brown-ish, single-sided, 65x50mm prototype PCB board 
+ - For base, I'll use this cheap, brown-ish, single-sided, 5x7cm prototype PCB
 
    <img src="/blog/crafting-battery-powered-thingy-with-attiny85/banggood_5x7-pcb.webp" width="250px">
 
-   Double-sided green ones may be stronger, but would a pain to solder since everything would touch the other side.
+   Double-sided green ones may be stronger, but would be a pain to solder since everything would touch the other side...
 
  - Battery will be taken care of by, beloved, TP4056 :heart:
 
    <img src="/blog/crafting-battery-powered-thingy-with-attiny85/tp4056.webp" width="200px">
 
-   > One thing I did, is replacing it's `R3` resistor with 10kOhm - this will limit the charging current to 130mA. This will be healthier for our battery. Check out this video: https://www.youtube.com/watch?v=6asCEBm4ZAw
-   > Oh, and I'll also de-solder the USB port, since Digispark already has it
+   One thing I did, is replacing it's `R3` resistor with 10kOhm - this will limit the charging current to 130mA. This will be healthier for our battery. Check out this video: https://www.youtube.com/watch?v=6asCEBm4ZAw
+   
+   Oh, and I'll also de-solder the USB port, since Digispark already has it
 
- - LEDs of choice are, of course, WS2812. I'll use the strip instead of bear-bones smd's - it will save some mess with soldering
+ - LEDs of choice are, of course, WS2812. I'll use the strip instead of bear-bones SMD's - it will save some mess with soldering
  - :drum::drum::drum: and at the heart of everything, will be _**the**_ ATTiny85 - precisely, a Digispark board:
  
    <img src="/blog/crafting-battery-powered-thingy-with-attiny85/digispark.webp" width="250px">
@@ -57,11 +58,10 @@ After laying everything out, this is how it initially looks:
 
 > Preamble: I am not a professional electronics engineer, and I didn't precisely measure every single step. I messed with this for 3 full days straight, and I'm gonna just tell you what I did :relieved:
 
-What we want to achive: 
+Lifecycle we want to achieve:
+- *The thingy* will be woken up by a button press, and will turn on the LEDs. In that mode, we don't care about the usage *that much*, but would be nice to bring it down too - that way, we could maybe have the "red backlight" mode running for long time :heart:
 
-*The thingy* will be woken up by a button press, and will turn on the LEDs. In that mode, we don't care about the usage *that much*, but it would be very nice to bring it down too - that way, we could maybe have the "red backlight" mode running for long time without big power usage :heart:
-
-...after light is turned off (either by user or after timeout) it (ATtiny) goes to deep sleep. This is what we care about **the most**, since user could leave the thingy in that state for *a while* - maybe even a year. And we don't want to waste all the power *while turned off* - do we?
+- ...after light is turned off ATtiny goes to deep sleep. This is what we care about **the most**, since user could leave the thingy in that state for *a while* - maybe even a year. And we don't want to waste all the power *while turned off* - do we?
 
 ### Cutting away unnecessary parts
 First off - [grab yourself a digispark schematic](/blog/crafting-battery-powered-thingy-with-attiny85/digispark-schematic.pdf)

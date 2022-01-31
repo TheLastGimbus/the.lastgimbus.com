@@ -1,7 +1,7 @@
 ---
 title: "Hyperpathing"
 date: 2022-01-18T21:14:56+01:00
-draft: true
+draft: false
 ---
 
 I walk. I walk a lot. More precisely, I walk from points A to B in a middle-sized city ([Rzeszów, Poland](https://goo.gl/maps/jyxNVVKLXvPdhRN16)) to get with my everyday life and tasks.
@@ -13,7 +13,7 @@ That's what Hyper-pathing is about. Taking every shortcut there is ; cutting eve
 ## Why?
 Most cities - even in Europe - make no fucking sense. Get this - you have some large region, where there are offices, homes, restaurants, etc - theme park for humans. And 80% of this land is spent on fucking roads - so you can drive between your job and your home. You could probably walk there, if there weren't so many fucking roads.
 
-Because of this, I think you should get rid of any remorse for: walking through grass (instead of cobblestone path), jaywalking, and doing generally weird stuff. Your city it (probably) broken - and you have the right to *try* to make it suite you.
+Because of this, I think you should get rid of any remorse for: walking through grass (instead of cobblestone path), jaywalking, and doing generally weird stuff. Your city it (probably) broken - and you have the right to *try* to make it suit you.
 
 ## The basics
 > At any point of your journey - look where you want to go, look at the straight line to there, and just go

@@ -4,6 +4,8 @@ title = 'TheLastGimbus'
 
 enableRobotsTXT = true
 
+enableEmoji = true
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]

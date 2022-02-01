@@ -40,6 +40,8 @@ The modes/functions:
    <img src="/blog/crafting-battery-powered-thingy-with-attiny85/tp4056.webp" width="200px">
 
    One thing I did, is replacing it's `R3` resistor with 10kOhm - this will limit the charging current to 130mA. This will be healthier for our battery. Check out this video: https://www.youtube.com/watch?v=6asCEBm4ZAw
+
+   <img src="/blog/crafting-battery-powered-thingy-with-attiny85/tp4056_replaced-r3.webp" width="300px">
    
    Oh, and I'll also de-solder the USB port, since Digispark already has it
 

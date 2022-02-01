@@ -33,6 +33,12 @@ img {
     height: auto;
 }
 
+blockquote {
+    border-left: 4px solid #bbb;
+    padding: 0px 16px;
+    margin: 0px;
+}
+
 .nobreak {
     white-space: nowrap;
 }

@@ -79,3 +79,16 @@ Things from Digispark board that we can throw straight away - they waste power a
 There also is a 1KOhm pull-up resistor (R3 on schema) that keeps wasting power... but it's kinda required for USB communication... Solution? Solder it directly to USB-5V instead of VCC - this way it will only work with USB connected. Guy in this tutorial showed it nicely: https://www.instructables.com/Reducing-Battery-Power-Consumption-for-Digispark-A/ - but he suggests messing with a knife to cut the SMD resistor off (??) - I went ahead, de-soldered it altogether and used my own big ass THT one :relieved:
 
 Ps. If you're evaluating if zener diodes for USB draw power or smth - don't. I tried de-soldering them, and it didn't make a µA difference :ok_hand:
+
+#### Other hardware surprises
+This may not apply to you, but it turned out that WS2812's also drain power *while off* :flushed:
+
+Quite a lot of it, actually...
+
+<img src="/blog/crafting-battery-powered-thingy-with-attiny85/ws2812-draining-while-off.webp" width="400px">
+
+This :point_up: is 19-LEDs strip, draining 5.7mA (that's 0.3mA per LED) *while off*! My heart has 10 of those, so - consuming 0.3*10=3mA - with a 150mAh battery - it would go from 100% to 0 in 150/3/24 ~= 2 days - **while off**
+
+That's why I had to add small mosfet transistor to cut the power from LEDs:
+
+<img src="/blog/crafting-battery-powered-thingy-with-attiny85/mosfet-for-leds.webp" width="350px">

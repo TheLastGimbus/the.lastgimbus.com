@@ -11,6 +11,8 @@ You may be reading this post because of two reasons:
 
 With both `A` and `B` you should be satisfied - but `A` *may* leave you with unanswered questions, because I'll be talking mainly about my specific use-case (described below).
 
+"Option-A-choosers" should also know that this isn't a typical "scroll down to copy-paste the answer". You should probably read the whole thing :wink:
+
 ## What I'll be crafting
 Main idea is - a pretty, flashy heart that's ment as a gift :)
 
@@ -56,14 +58,14 @@ After laying everything out, this is how it initially looks:
 <img src="/blog/crafting-battery-powered-thingy-with-attiny85/initially-after-soldering_back.webp" width="400px">
 
 ## Making it low-power
-...this is the part for all "A-option-choosers"
+...this is the part for all "option-A-choosers"
 
 > Preamble: I am not a professional electronics engineer, and I didn't precisely measure every single step. I messed with this for 3 full days straight, and I'm gonna just tell you what I did :relieved:
 
 Lifecycle we want to achieve:
 - *The thingy* will be woken up by a button press, and will turn on the LEDs. In that mode, we don't care about the usage *that much*, but would be nice to bring it down too - that way, we could maybe have the "red backlight" mode running for long time :heart:
 
-- ...after light is turned off ATtiny goes to deep sleep. This is what we care about **the most**, since user could leave the thingy in that state for *a while* - maybe even a year. And we don't want to waste all the power *while turned off* - do we?
+- ...after light is turned off, ATtiny goes to deep sleep. This is what we care about **the most**, since user could leave the thingy in that state for *a while* - maybe even a year. And we don't want to waste all the power *while turned off* - do we?
 
 ### Cutting away unnecessary parts
 First off - [grab yourself a digispark schematic](/blog/crafting-battery-powered-thingy-with-attiny85/digispark-schematic.pdf)

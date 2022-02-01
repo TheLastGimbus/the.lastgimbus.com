@@ -92,3 +92,33 @@ This :point_up: is 19-LEDs strip, draining 5.7mA (that's 0.3mA per LED) *while o
 That's why I had to add small mosfet transistor to cut the power from LEDs:
 
 <img src="/blog/crafting-battery-powered-thingy-with-attiny85/mosfet-for-leds.webp" width="350px">
+
+### Playing with bootloader
+While playing with deep sleep (more on that later), I discovered that ~50% wakes from it end up with reboot rather than back to my code - meaning, ATtiny does it's "6-second initial delay" thing
+
+We do not want that - we want user to press the button and have the light instantly - besides, it wastes power too :roll_eyes:
+
+So - turns out that Digisparks are running this neat thing called [micronucleus](https://github.com/micronucleus/micronucleus) - it's a bootloader with soft-USB out-of-the-box! [Digistump Wiki](http://digistump.com/wiki/digispark/tricks) says that if you want to remove "the 6-second delay", you should install alternative flavor of that bootloader, where it waits only if P0 is pulled down on boot.
+
+Sounds great! Thing is, the links are old, and nowadays-version of micronucleus does not include that flavor compiled in "releases" folder. Luckily, I've successfully managed to compile it myself!
+
+Here is my fork: https://github.com/TheLastGimbus/micronucleus/tree/87346a2d/firmware/upgrades - I added "`
+upgrade-t85_jumper.hex`" and "`upgrade-t85_jumper_bod_disabled.hex`" versions - `bod_disabled` version should use even less power :)
+
+> Note: If you're curious, BOD is some 'thing' that watches for voltage drops - you probably don't need this
+
+Once you download `.hex` file of your choice, download the `micronucleus-cli` tool itself from their releases: https://github.com/micronucleus/micronucleus/releases
+
+Then, open the terminal, and just run it: `./micronucleus upgrade-t85_jumper_bod_disabled.hex` - similarly to uploading your Arduino code, you first run it, and then plug the USB in :eyes:
+
+...in my case, it didn't really work at first try :face_with_monocle: - try a mix of uploading bootloader, then the code, then bootloader again until it works :heart:
+
+> Note: this seems scary, and sounds like something you could brick your device with! Well... probably yes, but I've done it few times with few boards, and didn't brick anything <sup>yet</sup>!!
+> 
+> > But, as a precaution, you probably should try with some backup board first :wink:
+
+<video width="200" autoplay loop muted playsinline controls>
+    <source src="/blog/crafting-battery-powered-thingy-with-attiny85/instant-boot.webm" type="video/mp4" />
+</video>
+
+Tada :tada: boots _**instantly :100:**_ 

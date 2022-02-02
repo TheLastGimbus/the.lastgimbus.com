@@ -117,8 +117,4 @@ Then, open the terminal, and just run it: `./micronucleus upgrade-t85_jumper_bod
 > 
 > > But, as a precaution, you probably should try with some backup board first :wink:
 
-<video width="200" autoplay loop muted playsinline controls>
-    <source src="/blog/crafting-battery-powered-thingy-with-attiny85/instant-boot.webm" type="video/mp4" />
-</video>
-
-Tada :tada: boots _**instantly :100:**_ 
+{{< video-gif src="/blog/crafting-battery-powered-thingy-with-attiny85/instant-boot.webm" type="video/mp4" width="200px" caption="Tada :tada: boots _**instantly :100:**_">}}

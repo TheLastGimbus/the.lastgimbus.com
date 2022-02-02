@@ -1,0 +1,6 @@
+<figure>
+    <video width="{{.Get `width`}}" height="{{.Get `height`}}" autoplay loop muted playsinline controls>
+        <source src="{{.Get `src`}}" type="{{ with (.Get `type`) }}{{ . }}{{ else }}video/mp4{{ end }}"/>
+    </video>
+    <figcaption>{{.Get "caption" | markdownify | emojify}}</figcaption>
+</figure>

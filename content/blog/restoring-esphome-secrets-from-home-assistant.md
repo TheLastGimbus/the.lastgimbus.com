@@ -1,7 +1,7 @@
 ---
 title: "Restoring ESPHome secrets from Home Assistant"
 date: 2022-03-01T12:15:00+01:00
-draft: true
+draft: false
 ---
 
 Hi there 👋 !

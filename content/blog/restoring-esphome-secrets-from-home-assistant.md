@@ -6,11 +6,15 @@ draft: false
 
 Hi there 👋 !
 
-If you're as a big brain as me 🧠 and, for example, you fried your only PC with your ESPHome's `secrets.yaml` file...
+If you're as a big brain as me 🧠 and, for example, you fried your only PC with your [ESPHome](https://esphome.io/)'s `secrets.yaml` file...
 
 ...and now you can't update, nor make new devices because you don't have your api password or encryption key...
 
-...do not worry! You can restore them from Home Assistant itself! Here is how:
+...do not worry! You can restore them from [Home Assistant](https://www.home-assistant.io/) itself! Here is how:
+
+> In case you landed here by accident: ESPHome is a super-cool system that allows you to make your own devices like WiFi thermometers, plugs, etc very easily! Check it out: https://esphome.io/
+> 
+> Home Assistant is a gigachad solution for smart home - it unites all of your Phillips Hue's, Google Home's and Xiaomi's into one, open-source, ✨beautiful✨ dashboard. It's a main usecase of ESPHome. Check it out too: https://www.home-assistant.io/
 
 --- 
 

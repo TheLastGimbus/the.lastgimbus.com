@@ -18,6 +18,8 @@ They are all stored in `config/.storage/core.config_entries` file 🌈
 
 Open it in some text editor and search for `"password"` or `"noise_psk"` - here they are! Not hashed, not salted, just plain-text 😀
 
+> // Sadly, you can't restore your `web_server` credentials like that :( - but they are not as important 👍
+
 <sub>(for me, it looked like this:)</sub>
 ```bash
 matiii@gimbpc:~$ ssh matiii@matih.duckdns.org

@@ -33,6 +33,23 @@ img {
     height: auto;
 }
 
+blockquote {
+    border-left: 4px solid #bbb;
+    padding: 0px 16px;
+    margin: 0px;
+}
+
+figure {
+    margin: 0px;
+    padding: 0px;
+}
+
+figure figcaption {
+    font-size: 0.8em;
+    margin: 0px 16px;
+    padding: 0px;
+}
+
 .nobreak {
     white-space: nowrap;
 }

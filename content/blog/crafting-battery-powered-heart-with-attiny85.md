@@ -172,7 +172,15 @@ void sleepNow() {
 }
 ```
 
+### Results :tada:
 
+After all of those modifications, my Digispark board uses `3.5uA` of current *while in deep sleep*, and about `13mA` *when on* (with LEDs disabled of course) :ice: :sunglasses:
+
+With a `400mAh` battery that I use, it will last:
+- `400mAh/0.0035mA/24hours/365days = ~13 years` !!
+- `400mAh/13mA/24hours = ~1.25 days` when running (with LEDs off)
+
+This is nice!
 
 ## Coding it!
 

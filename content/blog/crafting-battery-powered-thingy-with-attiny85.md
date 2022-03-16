@@ -1,7 +1,7 @@
 ---
 title: "Crafting a battery-powered thingy with ATiny85"
-date: 2022-01-31T21:14:30+01:00
-draft: true
+date: 2022-02-14T00:00:00+01:00
+draft: false
 ---
 
 You may be reading this post because of two reasons:

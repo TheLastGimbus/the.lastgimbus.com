@@ -1,5 +1,5 @@
 ---
-title: "Crafting a battery-powered thingy with ATiny85"
+title: "Crafting a battery-powered heart with ATiny85"
 date: 2022-02-14T00:00:00+01:00
 draft: false
 ---
@@ -18,7 +18,7 @@ Main idea is - a pretty, flashy heart that's ment as a gift :)
 
 Besides being pretty and flashy, it would be awesome if it would also turn out :sparkles:useful:sparkles:
 
-<img src="/blog/crafting-battery-powered-thingy-with-attiny85/final-result_off.jpg" width="350px"> <img src="/blog/crafting-battery-powered-thingy-with-attiny85/final-result_pink.jpg" width="350px">
+<img src="/blog/crafting-battery-powered-heart-with-attiny85/final-result_off.jpg" width="350px"> <img src="/blog/crafting-battery-powered-heart-with-attiny85/final-result_pink.jpg" width="350px">
 
 ### What it will do
 I want it to work like a standard light/torch - you have a single button that you click to enable it, then it changes modes, then it turns off. From user perspective, this is blatantly simple. But form electrical/programming side, it may be a challenge.
@@ -36,29 +36,29 @@ The modes/functions:
 
    Actually, the brown ones turned out to be very fragile, and copper pads de-soldered *all the time*, so I finally used the green one:
 
-   <img src="/blog/crafting-battery-powered-thingy-with-attiny85/banggood_5x7-pcb.webp" width="250px"> <img src="/blog/crafting-battery-powered-thingy-with-attiny85/green-pcb.webp" width="250px">
+   <img src="/blog/crafting-battery-powered-heart-with-attiny85/banggood_5x7-pcb.webp" width="250px"> <img src="/blog/crafting-battery-powered-heart-with-attiny85/green-pcb.webp" width="250px">
 
    ~~Double-sided green ones may be stronger, but would be a pain to solder since everything would touch the other side...~~ - i solved that by covering some parts with isolation tape
 
  - Battery will be taken care of by, beloved, TP4056 :heart:
 
-   <img src="/blog/crafting-battery-powered-thingy-with-attiny85/tp4056.webp" width="200px">
+   <img src="/blog/crafting-battery-powered-heart-with-attiny85/tp4056.webp" width="200px">
 
    One thing I did, is replacing it's `R3` resistor with 10kOhm - this will limit the charging current to 130mA. This will be healthier for our battery. Check out this video: https://www.youtube.com/watch?v=6asCEBm4ZAw
 
-   <img src="/blog/crafting-battery-powered-thingy-with-attiny85/tp4056_replaced-r3.webp" width="300px">
+   <img src="/blog/crafting-battery-powered-heart-with-attiny85/tp4056_replaced-r3.webp" width="300px">
    
    Oh, and I'll also de-solder the USB port, since Digispark already has it
 
  - LEDs of choice are, of course, WS2812. I'll use the strip instead of bear-bones SMD's - it will save some mess with soldering
  - :drum::drum::drum: and at the heart of everything, will be _**the**_ ATTiny85 - precisely, a Digispark board:
  
-   <img src="/blog/crafting-battery-powered-thingy-with-attiny85/digispark.webp" width="250px">
+   <img src="/blog/crafting-battery-powered-heart-with-attiny85/digispark.webp" width="250px">
 
 After laying everything out, this is how it initially looks:
 
-<img src="/blog/crafting-battery-powered-thingy-with-attiny85/initially-after-soldering_front.webp" width="400px">
-<img src="/blog/crafting-battery-powered-thingy-with-attiny85/initially-after-soldering_back.webp" width="400px">
+<img src="/blog/crafting-battery-powered-heart-with-attiny85/initially-after-soldering_front.webp" width="400px">
+<img src="/blog/crafting-battery-powered-heart-with-attiny85/initially-after-soldering_back.webp" width="400px">
 
 ## Making it low-power
 ...this is the part for all "option-A-choosers"
@@ -66,12 +66,12 @@ After laying everything out, this is how it initially looks:
 > Preamble: I am not a professional electronics engineer, and I didn't precisely measure every single step. I messed with this for 3 full days straight, and I'm gonna just tell you what I did :relieved:
 
 Lifecycle we want to achieve:
-- *The thingy* will be woken up by a button press, and will turn on the LEDs. In that mode, we don't care about the usage *that much*, but would be nice to bring it down too - that way, we could maybe have the "red backlight" mode running for long time :heart:
+- *The heart* will be woken up by a button press, and will turn on the LEDs. In that mode, we don't care about the usage *that much*, but would be nice to bring it down too - that way, we could maybe have the "red backlight" mode running for long time :heart:
 
-- ...after light is turned off, ATtiny goes to deep sleep. This is what we care about **the most**, since user could leave the thingy in that state for *a while* - maybe even a year. And we don't want to waste all the power *while turned off* - do we?
+- ...after light is turned off, ATtiny goes to deep sleep. This is what we care about **the most**, since user could leave the heart in that state for *a while* - maybe even a year. And we don't want to waste all the power *while turned off* - do we?
 
 ### Cutting away unnecessary parts
-First off - [grab yourself a digispark schematic](/blog/crafting-battery-powered-thingy-with-attiny85/digispark-schematic.pdf)
+First off - [grab yourself a digispark schematic](/blog/crafting-battery-powered-heart-with-attiny85/digispark-schematic.pdf)
 
 Things from Digispark board that we can throw straight away - they waste power all the time:
 - green power LED - this (as well as the red one) take hell lot of power - like 5mA~something => PWR on schematic
@@ -79,7 +79,7 @@ Things from Digispark board that we can throw straight away - they waste power a
 
 There also is a 1KOhm pull-up resistor (R3 on schema) that keeps wasting power... but it's kinda required for USB communication... Solution? Solder it directly to USB-5V instead of VCC - this way it will only work with USB connected. Guy in this tutorial showed it nicely: https://www.instructables.com/Reducing-Battery-Power-Consumption-for-Digispark-A/ - but he suggests messing with a knife to cut the SMD resistor off (??) - I went ahead, de-soldered it altogether and used my own big ass THT one :relieved:
 
-<img src="/blog/crafting-battery-powered-thingy-with-attiny85/desoldered-stuff-attiny85.webp" width="350px">
+<img src="/blog/crafting-battery-powered-heart-with-attiny85/desoldered-stuff-attiny85.webp" width="350px">
 
 `1` was the R3 resistor. `2` was the diode that connected 5V from usb to VCC of the board. I de-soldered it too, and connected 5V to input of the charger and *my own* pull-up
 
@@ -92,13 +92,13 @@ This may not apply to you, but it turned out that WS2812's also drain power *whi
 
 Quite a lot of it, actually...
 
-<img src="/blog/crafting-battery-powered-thingy-with-attiny85/ws2812-draining-while-off.webp" width="400px">
+<img src="/blog/crafting-battery-powered-heart-with-attiny85/ws2812-draining-while-off.webp" width="400px">
 
 This :point_up: is 19-LEDs strip, draining 5.7mA (that's 0.3mA per LED) *while off*! My heart has 10 of those, so - consuming 0.3*10=3mA - with a 150mAh battery - it would go from 100% to 0 in 150/3/24 ~= 2 days - **while off**
 
 That's why I had to add small mosfet transistor to cut the power from LEDs:
 
-<img src="/blog/crafting-battery-powered-thingy-with-attiny85/mosfet-for-leds.webp" width="350px">
+<img src="/blog/crafting-battery-powered-heart-with-attiny85/mosfet-for-leds.webp" width="350px">
 
 ### Playing with bootloader
 While playing with deep sleep (more on that later), I discovered that ~50% wakes from it end up with reboot rather than back to my code - meaning, ATtiny does it's "6-second initial delay" thing
@@ -124,7 +124,7 @@ Then, open the terminal, and just run it: `./micronucleus upgrade-t85_jumper_bod
 > 
 > > But, as a precaution, you probably should try with some backup board first :wink:
 
-{{< video-gif src="/blog/crafting-battery-powered-thingy-with-attiny85/instant-boot.webm" type="video/mp4" width="200px" caption="Tada :tada: boots _**instantly :100:**_">}}
+{{< video-gif src="/blog/crafting-battery-powered-heart-with-attiny85/instant-boot.webm" type="video/mp4" width="200px" caption="Tada :tada: boots _**instantly :100:**_">}}
 
 ### Saving power with code
 

@@ -7,7 +7,7 @@ draft: true
 You may be reading this post because of two reasons:
  - A - you're looking for resources about reducing ATTiny85 power consumption + deep sleep
  - B - you are really bored and are stalking my personal life
- - <sub><sup> C you're my english teacher considering whether to rise my grade or never read this again</sup></sub>
+ - <sub><sup> C you're my english teacher</sup></sub>
 
 With both `A` and `B` you should be satisfied - but `A` *may* leave you with unanswered questions, because I'll be talking mainly about my specific use-case (described below).
 
@@ -29,13 +29,16 @@ The modes/functions:
 - night light - dim and red-ish light - for walking around a house at night
 - backlight - for a bike or night walk - red bright light blinking like a heartbeat
 - showing battery level
+- animation when charging
 
 ## Parts
- - For base, I'll use this cheap, brown-ish, single-sided, 5x7cm prototype PCB
+ - ~~For base, I'll use this cheap, brown-ish, single-sided, 5x7cm prototype PCB~~
 
-   <img src="/blog/crafting-battery-powered-thingy-with-attiny85/banggood_5x7-pcb.webp" width="250px">
+   Actually, the brown ones turned out to be very fragile, and copper pads de-soldered *all the time*, so I finally used the green one:
 
-   Double-sided green ones may be stronger, but would be a pain to solder since everything would touch the other side...
+   <img src="/blog/crafting-battery-powered-thingy-with-attiny85/banggood_5x7-pcb.webp" width="250px"> <img src="/blog/crafting-battery-powered-thingy-with-attiny85/green-pcb.webp" width="250px">
+
+   ~~Double-sided green ones may be stronger, but would be a pain to solder since everything would touch the other side...~~ - i solved that by covering some parts with isolation tape
 
  - Battery will be taken care of by, beloved, TP4056 :heart:
 
@@ -74,9 +77,13 @@ Things from Digispark board that we can throw straight away - they waste power a
 - green power LED - this (as well as the red one) take hell lot of power - like 5mA~something => PWR on schematic
 - big ass voltage regulator - I don't even know why they put it here - 99% of people will never use it - anyway, it also takes like 10~ish mA => MC78... on schematic
 
-  In its place, I've also put small orange capacitor so the chip has nice smooth power :relieved:
-
 There also is a 1KOhm pull-up resistor (R3 on schema) that keeps wasting power... but it's kinda required for USB communication... Solution? Solder it directly to USB-5V instead of VCC - this way it will only work with USB connected. Guy in this tutorial showed it nicely: https://www.instructables.com/Reducing-Battery-Power-Consumption-for-Digispark-A/ - but he suggests messing with a knife to cut the SMD resistor off (??) - I went ahead, de-soldered it altogether and used my own big ass THT one :relieved:
+
+<img src="/blog/crafting-battery-powered-thingy-with-attiny85/desoldered-stuff-attiny85.webp" width="350px">
+
+`1` was the R3 resistor. `2` was the diode that connected 5V from usb to VCC of the board. I de-soldered it too, and connected 5V to input of the charger and *my own* pull-up
+
+Actually, there turned out to pe a very cool side effect of this - now we can easily read if board is connected to usb with a simple `digitalRead(3)`
 
 Ps. If you're evaluating if zener diodes for USB draw power or smth - don't. I tried de-soldering them, and it didn't make a µA difference :ok_hand:
 

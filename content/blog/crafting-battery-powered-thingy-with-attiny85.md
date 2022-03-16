@@ -18,7 +18,7 @@ Main idea is - a pretty, flashy heart that's ment as a gift :)
 
 Besides being pretty and flashy, it would be awesome if it would also turn out :sparkles:useful:sparkles:
 
-// TODO: Photo of final result
+<img src="/blog/crafting-battery-powered-thingy-with-attiny85/final-result_off.jpg" width="350px"> <img src="/blog/crafting-battery-powered-thingy-with-attiny85/final-result_pink.jpg" width="350px">
 
 ### What it will do
 I want it to work like a standard light/torch - you have a single button that you click to enable it, then it changes modes, then it turns off. From user perspective, this is blatantly simple. But form electrical/programming side, it may be a challenge.
@@ -83,7 +83,7 @@ There also is a 1KOhm pull-up resistor (R3 on schema) that keeps wasting power..
 
 `1` was the R3 resistor. `2` was the diode that connected 5V from usb to VCC of the board. I de-soldered it too, and connected 5V to input of the charger and *my own* pull-up
 
-Actually, there turned out to pe a very cool side effect of this - now we can easily read if board is connected to usb with a simple `digitalRead(3)`
+Actually, there turned out to pe a very cool side effect of this - now we can easily read if board is connected to usb with a simple `digitalRead(3)` (https://github.com/TheLastGimbus/mklove/commit/bd1b86d3)
 
 Ps. If you're evaluating if zener diodes for USB draw power or smth - don't. I tried de-soldering them, and it didn't make a µA difference :ok_hand:
 
@@ -125,3 +125,91 @@ Then, open the terminal, and just run it: `./micronucleus upgrade-t85_jumper_bod
 > > But, as a precaution, you probably should try with some backup board first :wink:
 
 {{< video-gif src="/blog/crafting-battery-powered-thingy-with-attiny85/instant-boot.webm" type="video/mp4" width="200px" caption="Tada :tada: boots _**instantly :100:**_">}}
+
+### Saving power with code
+
+#### Disabling ADC
+ADC draws quite a lot of power (few mA's) just by sitting there - you will find quite a few different ways to disable it 0_o - many of them didn't work for me - in particular, the nice one `disable_adc()` from `#include <avr/power.h>` didn't :(
+
+Here are ones I made:
+```cpp
+void disableAdc() { ADCSRA &= ~_BV(ADEN); }
+
+void enableAdc() { ADCSRA |= _BV(ADEN); }
+```
+
+With these, you can just disable ADC at startup, and dynamically enable it for few ms when using it :+1: - make sure to disable before for deep sleep tho!
+
+#### Going deep sleep
+Here are my sleep functions:
+```cpp
+// Will be called when button pressed
+void wake() {
+    detachInterrupt(0);  // Disable the interrupt - will not be called anymore
+    sleep_disable();  // Precaution
+}
+
+// Some additional setup *before* sleep itself
+void _preSleep() {
+    disableAdc();
+    digitalWrite(LED_BUILTIN, LOW);
+    pinMode(PIN_LEDS, INPUT_PULLUP);
+    digitalWrite(PIN_MOSFET, LOW);
+}
+
+/// Go to deep sleep with interrupt wakeup
+void sleepNow() {
+    _preSleep();
+
+    attachInterrupt(0, wake, LOW);
+    noInterrupts();  // This should (?) make it more reliable ??
+    set_sleep_mode(SLEEP_MODE_PWR_DOWN);
+    sleep_enable();
+    interrupts();
+    sleep_cpu();  // This is *the* moment where it sleeps
+    sleep_disable();  // ...and this is when it wakes up
+    detachInterrupt(0);
+}
+```
+
+
+
+## Coding it!
+
+After all of this mess, actual programming was pretty straightforward... well, except...
+
+### Flash size issues
+Turns out ATTiny85 is... well... tiny. While I was casually adding library for the LEDs, for buttons, and started implementing some crazy animations, I was surprised with PlatformIO telling me I don't have any space left!!
+
+After some optimizations and trade-offs, I realized I have a new bootloader. Which, conveniently, takes less space. So, now, I can *tell* PlatformIO that, "hey, I DO have space!":
+
+```ini
+; PlatformIO Project Configuration File
+
+[env:digispark-tiny]
+platform = atmelavr
+board = digispark-tiny
+framework = arduino
+; ### HERE IS THE THING ###
+; I don't want to get you into a hell of calculating this magic value. Here is micronucleus' "guide" if you really need it: https://github.com/micronucleus/micronucleus/blob/c2c7fa096de55303f324ec7d650d71d10cc29d1a/firmware/configuration/t85_default/Makefile.inc#L20
+; But - if you just uploaded *my* bootloader just as I did above, you can freely pase this:
+board_upload.maximum_size = 6586  
+lib_deps =
+    fastled/FastLED@^3.5.0
+    git+git://github.com/TheLastGimbus/EasyButton#attiny85-hack
+```
+
+
+### Code itself
+Whole code is available on my GitHub: https://github.com/TheLastGimbus/mklove/
+
+## Conclusions
+
+- Coding in C++ *actually* can be fun, and feel cool - unless you're not doing anything advanced
+- ATTiny85 itself is pretty problematic 
+  - throughout the whole journey, 3 of them just bricked, for no good reason :shrug:
+  - deep sleep sometimes breaks, and only solution is a reboot :confounded:
+  - very small flash size - while it can be *fun* in a way, you can't do a lot of magic in there :(
+- after a lot of mess and de-soldering - you can actually get a nice deep sleep - so that you can leave the device on a small battery for good couple of months :)
+
+- _**giving your crush a battery-powered-led-heart is, actually, a good way to start a relationship :sparkling_heart:**_

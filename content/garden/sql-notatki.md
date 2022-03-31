@@ -6,6 +6,7 @@ draft: false
 
 # SQL notatki
 
+```sql
 █░█░█ █▀▀ █▀█ █▀ ░░█ ▄▀█
 ▀▄▀▄▀ ██▄ █▀▄ ▄█ █▄█ █▀█
 
@@ -197,3 +198,4 @@ ALTER TABLE zamowienia ADD podatek FLOAT(4,2) AFTER wartosc; //AFTER X - umiejsc
 ALTER TABLE zamowienia DROP podatek;
 UPDATE klienci SET nazwisko='Głowacki Paweł' adres='Pokątna 9' miejscowosc='Zaścianek' WHERE klient_id=5;
 DELETE FROM zamowienia WHERE zamowienia_id BETWEEN 4 AND 8;
+```

@@ -1,6 +1,6 @@
 ---
 title: "Notatki sql :)"
-date: 2022-01-18T21:14:56+01:00
+date: 2022-03-31T22:00:00+02:00
 draft: false
 ---
 

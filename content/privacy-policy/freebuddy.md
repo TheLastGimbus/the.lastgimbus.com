@@ -1,5 +1,5 @@
 ---
-title: "Freebuddy Privacy Policy"
+title: "FreeBuddy Privacy Policy"
 date: 2022-09-20T08:58:34+02:00
 draft: false
 ---

@@ -20,7 +20,7 @@ collections:
     folder: "content/blog"
     create: true
     slug: "{{url}}"  # this means filename pretty much
-    media_folder: "{{media_folder}}../blog/{{url}}"
+    media_folder: "../../static/blog/{{url}}"
     public_folder: "/blog/{{url}}"
     fields:
       - label: "URL"

@@ -7,4 +7,4 @@ draft: false
 ---
 bla bla bla
 
-![]()
+![](/blog/cpp-na-maturze/signal-2022-10-02-113453_005.jpeg)

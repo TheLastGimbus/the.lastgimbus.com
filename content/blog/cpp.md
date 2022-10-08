@@ -1,6 +1,6 @@
 ---
 # URL and folder name for your post
-url: cpp
+url: dupalala
 title: dupalala
 date: 2022-10-08T19:12:32.652Z
 draft: false

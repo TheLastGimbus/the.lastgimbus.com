@@ -5,16 +5,19 @@ backend:
 publish_mode: editorial_workflow
 
 slug:
+  # I want purely ascii chars
   encoding: ascii
   clean_accents: true
   sanitize_replacement: "-"
 
-media_folder: "static/media" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/media" # The src attribute for uploaded media will begin with /images/uploads
+# This is global setting - most stuff (like blog post) have their own local ones
+media_folder: "static/media" # This is where this will be stored in a repo
+public_folder: "/media" # This is what will be in html src tags
 
 collections:
   - name: "blog"
     label: "Blog"
+    description: "Blog posts"
     folder: "content/blog"
     create: true
     slug: "{{my-url}}"  # this means filename pretty much
@@ -29,7 +32,7 @@ collections:
         required: true
         # https://stackoverflow.com/questions/24419067/validate-a-string-to-be-url-safe-using-regex
         pattern: ['^[a-zA-Z0-9_-]*$', 'Must be URL-Safe (no special chars etc)']
-        comment: "URL and folder name for your post"
+        comment: "Used when creating post with Netlify CMS, ignore it"
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Draft", name: "draft", widget: "boolean", default: true}

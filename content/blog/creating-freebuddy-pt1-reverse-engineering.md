@@ -30,3 +30,16 @@ We're gonna look at both. BLE will be easier, because we can easily view it with
 
 TODO: Screenshot that nRF shows nothing
 
+Hmm... so no obvious traits here... maybe the official app will help us?
+
+### De-compiling the official app
+
+If we're not sure what protocol to look for, maybe the answer will be inside the app's code?
+
+I tried using different java/apk decompilers, and most useful came out to be:
+ - [Apktool](https://ibotpeaches.github.io/Apktool/) - tool for nicely unpacking apks for manifests, resources etc.
+ - http://www.javadecompilers.com/ - online general tool for java - gave the best results
+
+#### Stuff found in app resources
+
+With Apktool, I got my hands on couple of interesting `.json`s and `.png`s

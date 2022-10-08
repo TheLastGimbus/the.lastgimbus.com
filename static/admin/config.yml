@@ -4,6 +4,11 @@ backend:
 
 publish_mode: editorial_workflow
 
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "-"
+
 # For hugo ; TODO: Change folder path
 # Duh, i want this dynamic :/
 media_folder: "static/media" # Media files will be stored in the repo under static/images/uploads
@@ -14,10 +19,11 @@ collections:
     label: "Blog"
     folder: "content/blog"
     create: true
-    slug: "{{slug}}"
+    slug: "{{url}}"
     media_folder: "static/blog/{{slug}}"
     public_folder: "/blog/{{slug}}"
     fields:
+      - {label: "URL", name: "url", widget: "string", default: "{{slug}}", required: true}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Draft", name: "draft", widget: "boolean", default: true}

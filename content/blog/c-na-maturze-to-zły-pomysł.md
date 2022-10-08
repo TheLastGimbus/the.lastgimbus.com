@@ -1,7 +1,7 @@
 ---
 title: C++ na maturze to zły pomysł
 date: 2022-10-08T07:39:18.896Z
-draft: true
+draft: false
 ---
 ## WTF
 

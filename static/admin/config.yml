@@ -9,8 +9,6 @@ slug:
   clean_accents: true
   sanitize_replacement: "-"
 
-# For hugo ; TODO: Change folder path
-# Duh, i want this dynamic :/
 media_folder: "static/media" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/media" # The src attribute for uploaded media will begin with /images/uploads
 
@@ -19,12 +17,14 @@ collections:
     label: "Blog"
     folder: "content/blog"
     create: true
-    slug: "{{url}}"  # this means filename pretty much
-    media_folder: "../../static/blog/{{url}}"
-    public_folder: "/blog/{{url}}"
+    slug: "{{my-url}}"  # this means filename pretty much
+    media_folder: "../../static/blog/{{my-url}}"
+    # TODO: Migrate to just pure relative urls maybe? Would be cleaner?
+    public_folder: "/blog/{{my-url}}"
     fields:
-      - label: "URL"
-        name: "url"
+      - label: "URL (do NOT edit after-hand!)"
+        # Can't just use 'url' here because hugo uses that (and I do not want that behaviour)
+        name: "my-url"
         widget: "string"
         required: true
         # https://stackoverflow.com/questions/24419067/validate-a-string-to-be-url-safe-using-regex

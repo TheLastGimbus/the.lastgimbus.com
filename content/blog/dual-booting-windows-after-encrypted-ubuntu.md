@@ -194,7 +194,7 @@ root@ubuntu:/home/ubuntu# pvs -v --segments
 ```
 As you can see, in my case, `root` was shrunk, but `swap_1` was *after* it, and it stayed in its place
 
-<img src="/blog/dual-booting-windows-after-encrypted-ubuntu/what-happens-after-lvresize.webp" alt="What happened after lvresize drawn in paint" width="450px">
+<img src="what-happens-after-lvresize.webp" alt="What happened after lvresize drawn in paint" width="450px">
 
 We'll do this with 
 ```bash
@@ -341,7 +341,7 @@ root@ubuntu:/home/ubuntu#
 ### WE ARE DONE RESIZING 🎉🎉🎉!!!
 If you calculated everything correctly, you can open gparted/Ubuntu disks and see that you have nice unallocated space 🚀
 
-<img src="/blog/dual-booting-windows-after-encrypted-ubuntu/gparted-showing-unallocated.webp" alt="Gparted showing unallocated space on disk" width="500px">
+<img src="gparted-showing-unallocated.webp" alt="Gparted showing unallocated space on disk" width="500px">
 
 You can close Ubuntu and open the champagne 🍾
 
@@ -384,7 +384,7 @@ Then go ahead with your normal windows installation
 
 When you get to this dialog:
 
-<img src="/blog/dual-booting-windows-after-encrypted-ubuntu/windoza-which-type-of-installation-dialog.webp" alt="Which type of installation windows  dialog" width="500px">
+<img src="windoza-which-type-of-installation-dialog.webp" alt="Which type of installation windows  dialog" width="500px">
 
 ...make sure to select "Custom: Install windows only", and then select the drive item that matches amount of space you've previously freed
 

@@ -22,15 +22,15 @@ Because of unavoidable stuff like bridges, mountains, etc, you may need to divde
 
 Look at this path:
 
-<img src="/garden/hyperpathing/politechnika-to-pkp.webp" width=400px>
+<img src="politechnika-to-pkp.webp" width=400px>
 
 A 🤮car🤮 would go like this (3.7km):
 
-<img src="/garden/hyperpathing/politechnika-to-pkp_car.webp" width=400px>
+<img src="politechnika-to-pkp_car.webp" width=400px>
 
 Google *walking* navigation (that I will later reffer to as *normie human*), would go like this (3.6km):
 
-<img src="/garden/hyperpathing/politechnika-to-pkp_human-normie.webp" width=400px>
+<img src="politechnika-to-pkp_human-normie.webp" width=400px>
 
 Wait... 3.6KM? 100m less THAN A CAR??? We can do better 🙄
 
@@ -38,7 +38,7 @@ Wait... 3.6KM? 100m less THAN A CAR??? We can do better 🙄
 
 **The straight line** on this path (after crossing this big ass yellow street) looks like this, and takes 3.0km:
 
-<img src="/garden/hyperpathing/politechnika-to-pkp_line.webp" width=400px>
+<img src="politechnika-to-pkp_line.webp" width=400px>
 
 "That's not realistic - you can't just go straight like this!" - you may say. To check this, I recorded my attempt, to see how much I can skip and how long will it take. Here are the results:
 

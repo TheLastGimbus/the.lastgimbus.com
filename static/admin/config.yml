@@ -23,7 +23,7 @@ collections:
     slug: "{{my-url}}"  # this means filename pretty much
     media_folder: "../../static/blog/{{my-url}}"
     # TODO: Migrate to just pure relative urls maybe? Would be cleaner?
-    public_folder: "/blog/{{my-url}}"
+    public_folder: ""
     fields:
       - label: "URL (do NOT edit after-hand!)"
         # Can't just use 'url' here because hugo uses that (and I do not want that behaviour)

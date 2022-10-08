@@ -22,7 +22,8 @@ collections:
     create: true
     slug: "{{my-url}}"  # this means filename pretty much
     media_folder: "../../static/blog/{{my-url}}"
-    # TODO: Migrate to just pure relative urls maybe? Would be cleaner?
+    # Pure relative paths - just the file name. Repo-wise it's clean, bc I have images in separate static/blabla folder,
+    # and site-wise it's clean because it's just <filename>. Manually changing it in <img src> will be easy
     public_folder: ""
     fields:
       - label: "URL (do NOT edit after-hand!)"

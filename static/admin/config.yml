@@ -31,9 +31,9 @@ collections:
         widget: "string"
         required: true
         # https://stackoverflow.com/questions/24419067/validate-a-string-to-be-url-safe-using-regex
-        pattern: ['^[a-zA-Z0-9_-]*$', 'Must be URL-Safe (no special chars etc)']
+        pattern: [ '^[a-zA-Z0-9_-]*$', 'Must be URL-Safe (no special chars etc)' ]
         comment: "Used when creating post with Netlify CMS, ignore it"
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Draft", name: "draft", widget: "boolean", default: true}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: true }
+      - { label: "Body", name: "body", widget: "markdown" }

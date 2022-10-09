@@ -102,6 +102,8 @@ cout << suma / ROZMIAR << endl;  // To coś wypisze "3"
 cout << (float)suma / ROZMIAR << endl;  // To już wypisze "3.4"
 ```
 
+<br>
+
 ```python
 tablica = [2, 1, 3, 7, 6, 9, 4, 2, 0, 0]
 suma = 0

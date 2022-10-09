@@ -17,7 +17,7 @@ Nauka nowych języków brzmi strasznie dla początkującego - zwłaszcza jeśli 
 mojaZmienna = False
 
 if mojaZmienna:
-  print('dupa')
+    print('dupa')
 ```
 
 zamiast
@@ -26,9 +26,91 @@ zamiast
 bool mojaZmienna = false;
 
 if (mojaZmienna) {
-  cout << "dupa" << endl;
+    cout << "dupa" << endl;
 }
 ```
 
 ## #2. Zadanka na maturze
 Przyjżyjmy się jakie zadanka są na maturze. Popatrzmy na [część drugą z maja 2022](https://arkusze.pl/maturalne/informatyka-2022-maj-matura-rozszerzona-2.pdf) i [z 2021](https://arkusze.pl/maturalne/informatyka-2021-maj-matura-rozszerzona-2.pdf).
+
+Możesz sie w to wczytać, ale moge ci streścić, że co pojawia się **za każdym razem**, to 
+
+> "jest jakiś plik .txt z jakimiś danymi, i masz go wczytać i cośtam zrobić"
+
+### Część 1/2 - "Wczytać kuźwa plik"
+
+Spróbujmy zrobić samo to. Wczytać plik, i go wyświetlić.
+
+Let's go C++:
+
+```cpp
+// Includujemy cały shit
+// już tu możesz sie wykrzaczyć, o czym później
+#include <iostream>
+#include <fstream>
+
+// Bo tak
+using namespace std;
+
+int main() {
+    ifstream pliczek("file.txt");
+    string linia;
+    // Jakaś dziwna pętla
+    while (getline(pliczek, linia)) {
+        cout << linia << endl;
+    }
+    pliczek.close();
+}
+```
+
+No... ym okej... teraz pajton:
+
+```python
+with open('file.txt', 'r') as pliczek:
+  print(pliczek.read())
+# Tyle.
+
+# Ten "with" automatycznie otwiera i zamyka plik kiedy sie z niego wyjdzie
+# Jeśli nie ogarniasz, możesz zrobić po prostu:
+
+pliczek = open('file.txt', 'r')
+print(pliczek.read())
+pliczek.close()
+```
+
+To jest dosłownie wszytko co musisz napisać. Nie pominałem żadnych includów, importów, itp.
+
+### Część 2/2 - "Cośtam hehe zrobić"
+
+Wiele z tych zadań to właśnie "masz plik z liczbami, policz średnią z nich". Spróbujmy sobie to zrobić.
+
+Pomine teraz cały shit z importowaniem bibliotek, konwertowaniem `string`ów na `int`y, i po prostu dam tablice z liczbami:
+
+```cpp
+// Ah, tak, musisz znać rozmiar cały czas
+// Chyba że umiesz vectory, ale też możesz sie nimi wykrzaczyć
+int ROZMIAR = 10;
+int tablica[ROZMIAR] = {2, 1, 3, 7, 6, 9, 4, 2, 0, 0};
+int suma = 0;
+// Uważaj żeby ci sie "<" i "<=" nie popierdoliło ;)
+for (int i = 0; i < ROZMIAR; i++) {
+    suma += tablica[i];
+}
+cout << suma / ROZMIAR << endl;  // To coś wypisze "3"
+
+// Tak, żeby mieć poprawną średnią to też musi być floatem
+cout << (float)suma / ROZMIAR << endl;  // To już wypisze "3.4"
+```
+
+```python
+tablica = [2, 1, 3, 7, 6, 9, 4, 2, 0, 0]
+suma = 0
+for element in tablica:
+    suma += element
+
+# len() zwraca długość tablicy
+print(suma /  len(tablica))
+
+# Teraz uważaj, bo jeśli jesteś pajtonowym pro, to możesz jeszcze tak:
+print(sum(tablica) / len(tablica))  # Bez tego fora
+```

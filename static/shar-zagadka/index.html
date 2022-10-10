@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Zagadka</title>
+
+  <!--  WARNING: *ONLY* version 3.10.6 works properly -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.10.6/brython.min.js"></script>
+</head>
+<body onload="brython()">
+<h1>Zagadka!</h1>
+<textarea rows="10" cols="40" id="textareaCode">
+# Tu możesz pisać pythonowy kod!
+def funkcja():
+  print('dupa jasia')
+  return "hello there"
+</textarea>
+
+<p>Wynik: <span id="result">czkeam...</span></p>
+
+<script type="text/python">
+  from browser import document
+
+  # Get text from textareaCode, test function and show if success
+  def test_code(ev):
+    code = document["textareaCode"].value
+    try:
+      exec(code)
+      output = funkcja()
+      if output == "happy!":
+        document["result"].text = "Dobrzee syneek"
+      else:
+        document["result"].text = "zle jeszcze"
+    except Exception as e:
+      print('Error!', e)
+
+  # Add event listener to text edit
+  document["textareaCode"].bind("input", test_code)
+
+</script>
+</body>
+</html>

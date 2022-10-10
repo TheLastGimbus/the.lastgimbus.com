@@ -14,8 +14,8 @@
 <h1>Zagadka!</h1>
 <p>Oto następna zagadka 🤸</p>
 <p>Poniżej jest Python'owy kod 🐍 - jest w nim funkcja, o nazwie "shar_funkcja"</p>
-<p>Zmień ją tak, żeby zwracała cyfrę, jak bardzo kochasz swojego chłopaka</p>
-<p>I wciśnij przycisk "sprawdź", żeby sprawdzić, czy wartość jest poprawna</p>
+<p>Zmień ją tak, żeby zwracała liczbę "jak bardzo kochasz swojego chłopaka?"</p>
+<p>...i wciśnij przycisk "sprawdź", żeby sprawdzić, czy wartość jest poprawna</p>
 <p>Jeśli tak będzie, dostaniesz następną lokalizację 🥳</p>
 <textarea rows="8" cols="40" id="textareaCode">
 # Tu możesz pisać Pythonowy kod!
@@ -30,6 +30,8 @@ def shar_funkcja():
 <button id="btnCheck">Sprawdź!</button>
 
 <p>Wynik: <span id="result">czkeam...</span></p>
+
+<p class="hide" id="treasure">Oto opowiedź!! TODO: Odpowiedź</p>
 
 <script type="text/python">
   from browser import document
@@ -50,12 +52,17 @@ def shar_funkcja():
     global _love
     global _count
 
+    # Show treasure trait
+    if _count >= 3:
+      document["treasure"].class_name = ""
+
     code = document["textareaCode"].value
     response = "mmmm cos jest nie tak ze stronką :((("
     try:
       exec(code)
       output = shar_funkcja()
 
+      # Feedback text handle
       if _count >= 4:
         response = "Już wystarczy 🤭"
       else:
@@ -79,6 +86,8 @@ def shar_funkcja():
   document["btnCheck"].bind("click", test_code)
 
 
+
+
 </script>
 </body>
 <style>
@@ -90,6 +99,10 @@ def shar_funkcja():
     button {
         padding: 10px;
         margin: 2px;
+    }
+
+    .hide {
+        visibility: hidden;
     }
 </style>
 </html>

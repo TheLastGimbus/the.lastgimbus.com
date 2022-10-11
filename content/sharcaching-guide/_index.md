@@ -5,5 +5,7 @@ draft: true
 ---
 
 {{< locked-content id="secret1" password="5362" >}}
-Super secret content
+# Whoa
+
+**this is** nice
 {{< /locked-content >}}

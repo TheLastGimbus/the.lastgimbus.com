@@ -4,7 +4,7 @@
   <button class="unlockBtn">Unlock</button>
   <div style="visibility: hidden" class="lockedContent">
     <br>
-    {{ .Inner }}
+    {{ .Inner | markdownify | emojify }}
   </div>
   <script>
       const mainDiv = document.getElementById("{{ .Get `id` }}");

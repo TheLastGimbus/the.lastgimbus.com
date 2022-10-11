@@ -50,13 +50,13 @@ Po prawej od okien jest rynna z różnymi naklejkami - znajdź tam kartkę z dal
 
 Udało Ci się i dotarłoś do drugiej poszlaki! Twoja kolejna misja - udaj sie do miejsca, które łączy Cie z domem, wakacjami, i resztą świata. Podpowiedź - jest tam dużo czegoś, czego aseksualnym ludziom brakuje 😉😉😉
 
-Znajdź tam automat z przekąskami. Ale drogo! Nie kupuj niczego 😒 znajdź tylko cene podłużnego knopersa (w złotówkach). Potem popatrz do góry - ile jest świecących niebieskich ekranów z rozkładem?
+Znajdź tam automat z kawą. Ale drogo! Nie kupuj niczego 😒 znajdź tylko cene czekolady (w złotówkach). Potem popatrz do góry - ile jest pojedynczych świecących niebieskich ekranów z rozkładem?
 
-Zanotuj te cyferki i wprowadź je do tego wzoru żeby dostać koordynaty następnego miejsca! Tam, dostaniesz prowiant, oraz dalsze instrukcje od naszego wspólnika 😎 - powinien Cie rozpoznać, ale nie wahaj się zapytać wprost
+Zanotuj te cyferki i wprowadź je do tego wzoru żeby dostać koordynaty następnego miejsca! Tam, dostaniesz prowiant, oraz dalsze instrukcje od naszego wspólnika 😎 - powinien Cie rozpoznać, ale nie wahaj się zapytać wprost 🗣
 
 #### Wzór:
 
-`50.0 <cena knopersa + 1> 055, 22.00 <ilość rozkładów - 2> 58`
+`50.0 <cena czekolady> 055, 22.00 <ilość rozkładów - 2> 58`
 
 #### Przykład:
 

@@ -100,3 +100,18 @@ Link do stronki: https://the.lastgimbus.com/shar-zagadka/
 Brawo 🎉 wrócmy do świata rzeczywistego - idź do pomnika chłopca, który bardzo nie lubi latarni - w ławce koło niego będzie schowana kolejna kartka 📜. Jedziesz 💪
 
 {{< /locked-content >}}
+
+## Etap 6 (informacje z kartki pod ławką)
+
+{{< locked-content id="secret6" password="6257" passwordLabel="Pin z kartki pod ławką" >}}
+
+Co jest 1440 razy w dniu, 10080 w tygodniu, ale ani razu w momencie?
+
+![Shitty thinking emoji](/memes/shitty-thinking-emoji.png)
+
+Odpowiedź podaj do: [+48 533 900 794](tel:+48533900794)
+
+(lub awaryjnie [+48 572 601 192](tel:+48572601192))
+
+{{< /locked-content >}}
+

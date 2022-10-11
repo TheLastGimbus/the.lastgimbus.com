@@ -115,3 +115,28 @@ Odpowiedź podaj do: [+48 533 900 794](tel:+48533900794)
 
 {{< /locked-content >}}
 
+## Etap 7 (informacje z telefonu)
+
+{{< locked-content id="secret7" password="1234" passwordLabel="Pin z... też nie masz skad wziąć 😶" >}}
+
+Idź do fontann multimedialnych. Popatrz na te wielo-poziomowe ławki. Na maksa po prawej, jest koło nich skrzynka elektryczna - szukaj koło niej w krzakach jakichś dalszych przedmiotów 👀
+
+{{< /locked-content >}}
+
+## Etap 8 (informacje z przedmiotów przy f...nnie)
+
+{{< locked-content id="secret8" password="0736" passwordLabel="Pin z kartki" >}}
+
+TODO: Informacje w fontannie
+
+{{< /locked-content >}}
+
+## Etap 8 (informacje z labiryntu)
+
+{{< locked-content id="secret9" password="3401" passwordLabel="Pin z labiryntu" >}}
+
+Brawo 🎉🎉🎉
+
+Teraz, udaj sie do pierścienia, gdzie zazwyczaj jest fontanna, ale czasami przyjeżdża cyrk 🤡🤡🤡
+
+{{< /locked-content >}}

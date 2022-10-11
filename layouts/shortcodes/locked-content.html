@@ -1,8 +1,12 @@
 <div id="{{ .Get `id` }}">
   <!--  TODO: Change this to form maybe -->
-  <input type="number" class="unlockPinInput">
+  <label>
+    {{ with (.Get `passwordLabel`) }}{{ . }}{{ else }}Password:{{ end }}
+    <br>
+    <input type="number" class="unlockPinInput">
+  </label>
   <button class="unlockBtn">Unlock</button>
-  <div style="visibility: hidden" class="lockedContent">
+  <div style="display: none" class="lockedContent">
     <br>
     {{ .Inner | markdownify | emojify }}
   </div>
@@ -13,7 +17,9 @@
       const lockedContent = document.querySelector('.lockedContent');
       unlockBtn.addEventListener('click', () => {
           if (unlockPinInput.value === "{{ .Get `password` }}") {
-              lockedContent.style.visibility = 'visible';
+              lockedContent.style.display = "block";
+          } else {
+              alert("Wrong password");
           }
       });
   </script>

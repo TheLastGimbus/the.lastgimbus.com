@@ -1,0 +1,20 @@
+<div id="{{ .Get `id` }}">
+  <!--  TODO: Change this to form maybe -->
+  <input type="number" class="unlockPinInput">
+  <button class="unlockBtn">Unlock</button>
+  <div style="visibility: hidden" class="lockedContent">
+    <br>
+    {{ .Inner }}
+  </div>
+  <script>
+      const mainDiv = document.getElementById("{{ .Get `id` }}");
+      const unlockPinInput = mainDiv.querySelector(".unlockPinInput");
+      const unlockBtn = mainDiv.querySelector(".unlockBtn");
+      const lockedContent = document.querySelector('.lockedContent');
+      unlockBtn.addEventListener('click', () => {
+          if (unlockPinInput.value === "{{ .Get `password` }}") {
+              lockedContent.style.visibility = 'visible';
+          }
+      });
+  </script>
+</div>

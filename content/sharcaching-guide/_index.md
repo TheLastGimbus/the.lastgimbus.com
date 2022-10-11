@@ -73,3 +73,30 @@ Gdyby cena knopersa = 1zł, a wyświetlaczy było 2, to byłoby:
 Po prostu wklej je do Google Maps:
 
 ![Przykład wklejonych koordynatów na Google Maps](coordinates-example.jpg)
+
+
+{{< /locked-content >}}
+
+## Etap 3 (informacje od wspólnika)
+
+{{< locked-content id="secret3" password="7504" passwordLabel="Pin z... well, nie masz skąd go wziąc 😶" >}}
+
+Informacja powinna być taka, że masz znaleźć ziemie z Rzeszowskiego układu słonecznego, i poszukać koło niej qr koda 👍
+
+{{< /locked-content >}}
+
+## Etap 4 (QR kod)
+
+{{< locked-content id="secret4" password="6720" passwordLabel="Pin z kartki z qr kodem" >}}
+
+Link do stronki: https://the.lastgimbus.com/shar-zagadka/
+
+{{< /locked-content >}}
+
+## Etap 5 (informacje z zagadki programistycznej)
+
+{{< locked-content id="secret5" password="9365" passwordLabel="Pin z zagadki programistycznej" >}}
+
+Brawo 🎉 wrócmy do świata rzeczywistego - idź do pomnika chłopca, który bardzo nie lubi latarni - w ławce koło niego będzie schowana kolejna kartka 📜. Jedziesz 💪
+
+{{< /locked-content >}}

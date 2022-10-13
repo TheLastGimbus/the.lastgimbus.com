@@ -160,3 +160,19 @@ Brawo 🎉🎉🎉
 Teraz, udaj sie do pierścienia, gdzie zazwyczaj jest fontanna, ale czasami przyjeżdża cyrk 🤡🤡🤡 - poszukaj tam kartki koło dyszy z wodą (psst: od strony wschodniej ;)
 
 {{< /locked-content >}}
+
+## Etap 9 (info z dyszy)
+
+{{< locked-content id="secret10" password="6560" passwordLabel="Pin z kartki" >}}
+
+Ostatnia zagadka przed tobą:
+
+Wejdź na środek platformy cyrkowej, na też czarny dysk (spokojnie, to nie pułapka, obiecuje 😁😁) - potuptaj po nim. Co słyszysz? 
+
+Słowo na 4 litery: ...........
+
+Użyj tego słowa jako klucza Gaderypoluki, i odszyfruj poniższy tekst:
+
+naszc drzcwkh => ............ - udaj się tam 🎉
+
+{{< /locked-content >}}

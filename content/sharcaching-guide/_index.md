@@ -157,6 +157,6 @@ Powodzenia!
 
 Brawo 🎉🎉🎉
 
-Teraz, udaj sie do pierścienia, gdzie zazwyczaj jest fontanna, ale czasami przyjeżdża cyrk 🤡🤡🤡
+Teraz, udaj sie do pierścienia, gdzie zazwyczaj jest fontanna, ale czasami przyjeżdża cyrk 🤡🤡🤡 - poszukaj tam kartki koło dyszy z wodą (psst: od strony wschodniej ;)
 
 {{< /locked-content >}}

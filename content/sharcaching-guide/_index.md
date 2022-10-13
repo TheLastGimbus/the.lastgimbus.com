@@ -127,7 +127,27 @@ Idź do fontann multimedialnych. Popatrz na te wielo-poziomowe ławki. Na maksa 
 
 {{< locked-content id="secret8" password="0736" passwordLabel="Pin z kartki" >}}
 
-TODO: Informacje w fontannie
+### Brawo <3
+
+Teraz, udaj się na...
+
+**_TE PASY_**
+
+(dla pieszych)
+
+i przeskocz przez nie wesoło ^_^
+
+Robiąc to, policz, ile ich jest po tej drugiej stronie (od budynków) - tą liczbe, pomnóż przez 3, a potem dodaj 8, i udaj się tu:
+
+```text
+X = (liczba pasów * 3) + 8
+50.0X 21
+22.00302
+```
+
+Szukaj tam zielonego sześciokąta. Będzie schowany w... wysoko :D 
+
+Powodzenia!
 
 {{< /locked-content >}}
 

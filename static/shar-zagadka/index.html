@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Zagadka</title>
+
+  <!--  WARNING: *ONLY* version 3.10.6 works properly -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.10.6/brython.min.js"></script>
+</head>
+<body onload="brython()">
+<h1>Zagadka!</h1>
+<p>Oto następna zagadka 🤸</p>
+<p>Poniżej jest Python'owy kod 🐍 - jest w nim funkcja, o nazwie "shar_funkcja"</p>
+<p>Zmień ją tak, żeby zwracała liczbę "jak bardzo kochasz swojego chłopaka?"</p>
+<p>...i wciśnij przycisk "sprawdź", żeby sprawdzić, czy wartość jest poprawna</p>
+<p>Jeśli tak będzie, dostaniesz następną lokalizację 🥳</p>
+<textarea rows="8" cols="40" id="textareaCode">
+# Tu możesz pisać Pythonowy kod!
+
+def shar_funkcja():
+  milosc = 6
+  return milosc
+
+
+</textarea>
+<br>
+<button id="btnCheck">Sprawdź!</button>
+
+<p>Wynik: <span id="result">czkeam...</span></p>
+
+<p class="hide" id="treasure">Brawo 🎉 wrócmy do świata rzeczywistego - idź do pomnika chłopca, który bardzo nie lubi
+  latarni - w ławce koło niego będzie schowana kolejna kartka 📜. Jedziesz 💪<br><br>Pin: 9365</p>
+
+<script type="text/python">
+  from browser import document
+
+  global _count
+  _count = 0
+  global _love
+  _love = 6
+
+  # Get text from textareaCode, test function and show if success
+  def test_code(ev):
+    good_resp = [
+      "Hmm, co tak mało 🤨",
+      "Dalej coś mało 🥱",
+      "Moooże jeszcze troszeczke 🥺🥺",
+      "Widze, że sie rozumiemy 😎",
+    ]
+    global _love
+    global _count
+
+    # Show treasure trait
+    if _count >= 3:
+      document["treasure"].class_name = ""
+
+    code = document["textareaCode"].value
+    response = "mmmm cos jest nie tak ze stronką :((("
+    try:
+      exec(code)
+      output = shar_funkcja()
+
+      # Feedback text handle
+      if _count >= 4:
+        response = "Już wystarczy 🤭"
+      else:
+        if output < 1:
+          response = "Ooo nie, zaraz sie obrazimy i koniec geokeszingu będzie 😤"
+        elif output > _love:
+          _love = output * 10
+          response = good_resp[_count]
+          _count += 1
+        else:
+          response = "No więceeej 🙄"
+
+
+    except Exception as e:
+      response = "Kod daje błędy 😬: " + str(e)
+      print('Error!', e)
+
+    document["result"].text = response
+
+  # Add event listener to btn click
+  document["btnCheck"].bind("click", test_code)
+
+
+
+
+
+</script>
+</body>
+<style>
+    p {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        padding: 10px;
+        margin: 2px;
+    }
+
+    .hide {
+        visibility: hidden;
+    }
+</style>
+</html>

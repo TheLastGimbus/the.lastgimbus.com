@@ -1,0 +1,29 @@
+<div id="{{ .Get `id` }}">
+  <!--  TODO: Change this to form maybe -->
+  <label>
+    {{ with (.Get `passwordLabel`) }}{{ . }}{{ else }}Password:{{ end }}
+    <br>
+    <input type="number" class="unlockPinInput">
+  </label>
+  <button class="unlockBtn">Unlock</button>
+  <div style="display: none" class="lockedContent">
+    <br>
+    {{ .Inner | markdownify | emojify }}
+  </div>
+  <script>
+      // Just to have scope for variables
+      if (true) {
+          const mainDiv = document.getElementById("{{ .Get `id` }}");
+          const unlockPinInput = mainDiv.querySelector(".unlockPinInput");
+          const unlockBtn = mainDiv.querySelector(".unlockBtn");
+          const lockedContent = mainDiv.querySelector('.lockedContent');
+          unlockBtn.addEventListener('click', () => {
+              if (unlockPinInput.value === "{{ .Get `password` }}") {
+                  lockedContent.style.display = "block";
+              } else {
+                  alert("Wrong password");
+              }
+          });
+      }
+  </script>
+</div>

@@ -5,7 +5,9 @@ draft: false
 ---
 
 Hi everyone!
-I brought a new gadget last weekend. It's a coffee maker!
+I brought a new gadget last weekend. 
+
+It's a coffee maker 🎉
 
 Reading my blog, you would expect some super smart, wifi-enabled machine - but actually, it's just a simple "transfer coffee maker".
 

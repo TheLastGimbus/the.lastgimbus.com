@@ -9,7 +9,7 @@
     }
 
     button {
-        margin: 16px;
+        margin: 18px 6px;
     }
 </style>
 <input type="file" accept=".mid,.midi" id="mid-input" class="hidden">
@@ -22,22 +22,32 @@
 </textarea>
 <br>
 <button class="big-button hidden" id="copy">Copy 📋</button>
+<button id="play" class="big-button hidden">Play it 🔊</button>
+<button id="stop" class="big-button hidden">Stop it 🛑</button>
 
 <script src="https://unpkg.com/@tonejs/midi@2.0.28/build/Midi.js"></script>
+<script src="/lib/textTuneConverters.js"></script>
+<script src="/lib/playTune.js"></script>
 <script>
     const secondsToMilliseconds = 1000;
 
     const input = document.getElementById('mid-input');
     const output = document.getElementById('output');
     const copy = document.getElementById('copy');
+    const play = document.getElementById('play');
+    const stop = document.getElementById('stop');
+    let tracks = [];
+    let playing = [];
+    const stopPlaying = () => playing.forEach((e) => e.end());
+
     input.addEventListener('change', (e) => {
         const file = e.target.files[0];
         const reader = new FileReader();
         reader.onload = (e) => {
+            tracks = [];
             const midi = new Midi(e.target.result);
-            let outStr = 'let tracks = [\n';
             midi.tracks.forEach((track, i) => {
-                outStr += `tune\`\n`;
+                tracks.push('');
                 track.notes.forEach((note, index) => {
                     var time = 0;
                     if (track.notes.length > index + 1) {
@@ -47,16 +57,16 @@
                     let duration = note.duration * secondsToMilliseconds;
                     if (index == 0) {
                         // delay so we don't start all track same time if one has delay
-                        outStr += `${note.time * secondsToMilliseconds},\n`;
+                        tracks[i] += `${note.time * secondsToMilliseconds},\n`;
                     }
-                    outStr += `${time}: ${note.name}^${duration},\n`;
+                    tracks[i] += `${time}: ${note.name}^${duration},\n`;
                 });
-                outStr += `\`,\n`;
             })
-            outStr += '];\n';
 
-            output.textContent = outStr;
+            output.textContent = 'let tracks = [\n' + tracks.map((e) => 'tune`\n' + e).join('`,\n') + '`,\n];';
             copy.classList.remove('hidden');
+            play.classList.remove('hidden');
+            stop.classList.remove('hidden');
         };
         reader.readAsArrayBuffer(file);
     });
@@ -73,7 +83,12 @@
                 console.error('Failed to copy to clipboard', err);
             });
     };
+    play.addEventListener('click', () => {
+        stopPlaying();
+        playing = [];
+        tracks.forEach((e) => playing.push(playTune(textToTune(e))));
+    });
+    stop.addEventListener('click', stopPlaying);
 
     input.classList.remove('hidden');
-
 </script>

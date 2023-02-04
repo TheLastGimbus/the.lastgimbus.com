@@ -1,0 +1,79 @@
+<style>
+    input {
+        margin: 16px;
+    }
+
+    #output {
+        /* Respect newlines */
+        white-space: pre;
+    }
+
+    button {
+        margin: 16px;
+    }
+</style>
+<input type="file" accept=".mid" id="mid-input" class="hidden">
+<br>
+<textarea id="output" cols="50" rows="10">
+
+  Your code will appear right here ^-^
+
+  Just input the file above 👆
+</textarea>
+<br>
+<button class="big-button hidden" id="copy">Copy 📋</button>
+
+<script src="https://unpkg.com/@tonejs/midi@2.0.28/build/Midi.js"></script>
+<script>
+    const secondsToMilliseconds = 1000;
+
+    const input = document.getElementById('mid-input');
+    const output = document.getElementById('output');
+    const copy = document.getElementById('copy');
+    input.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            const midi = new Midi(e.target.result);
+            let outStr = 'let tracks = [\n';
+            midi.tracks.forEach((track, i) => {
+                outStr += `tune\`\n`;
+                track.notes.forEach((note, index) => {
+                    var time = 0;
+                    if (track.notes.length > index + 1) {
+                        time = track.notes[index + 1].time - note.time;
+                    }
+                    time *= secondsToMilliseconds;
+                    let duration = note.duration * secondsToMilliseconds;
+                    if (index == 0) {
+                        // delay so we don't start all track same time if one has delay
+                        outStr += `${note.time * secondsToMilliseconds},\n`;
+                    }
+                    outStr += `${time}: ${note.name}^${duration},\n`;
+                });
+                outStr += `\`,\n`;
+            })
+            outStr += '];\n';
+
+            output.textContent = outStr;
+            copy.classList.remove('hidden');
+        };
+        reader.readAsArrayBuffer(file);
+    });
+    copy.onclick = () => {
+        const output = document.getElementById('output');
+        output.select();
+        output.setSelectionRange(0, 9999999); /* For mobile devices */
+        navigator.clipboard.writeText(output.value)
+            .then(() => {
+                console.log('Copied to clipboard');
+                copy.textContent = 'Copied 🚀';
+            })
+            .catch((err) => {
+                console.error('Failed to copy to clipboard', err);
+            });
+    };
+
+    input.classList.remove('hidden');
+
+</script>

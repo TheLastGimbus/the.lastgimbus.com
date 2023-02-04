@@ -3,45 +3,58 @@
         margin: 8px;
     }
 
+    /* big buttons easy to click */
+    input[type="number"] {
+        font-size: 1.2em;
+    }
+
     #result {
-        font-size: 200%;
+        font-size: 1.7em;
         font-weight: bold;
     }
 </style>
 <form name="kulkulator">
-  Na którym roku jesteś?</br>
-  <input type="number" name="year" step="1" min="1" max="16" value="1"></br>
-  Czy jest przed/teraz luty, czy po lutym?</br>
-  <input type="radio" name="month" value="before" id="r-before">przed/w trakcie</br>
-  <input type="radio" name="month" value="after" id="r-after">po</br>
+  W którym roku zacząłxś studia?</br>
+  <input type="number" name="year" step="1" min="2000" max="3000"></br>
+  Ile razy musiałxś powtarzać semestr?</br>
+  <input type="number" name="kiblowanie" step="1" min="0" max="100" value="0"></br>
   <input type="submit" name="submit" value="Sprawdź 🧮" class="hidden big-button">
 </form>
 <p id="result">&nbsp;</p>
 <script src="/lib/js.cookie.min.js"></script>
 <script>
     const date = new Date();
+    const currYear = date.getFullYear();
+    const currMonth = date.getMonth();
 
-    const cookieName = 'studentStartYear';
+    const cookieStart = 'studentStartYear';
+    const cookieKiblowanie = 'studentKiblowanieCount';
 
     document.kulkulator.onsubmit = (event) => {
         event.preventDefault();
         let data = new FormData(event.target);
-        let year = parseInt(data.get('year'));
-        let before = data.get('month') === 'before';
-        let semestr = year * 2 - (before ? 1 : 0);
-        document.getElementById('result').innerText = `Jesteś na ✨ ${semestr} ✨ semestrze`;
+        let yearStart = parseInt(data.get('year'))
+        let years = currYear - yearStart;
+        // after February and before August
+        let afterFeb = currMonth >= 2 && currMonth < 6;
+        let kiblowanie = parseInt(data.get('kiblowanie'));
+        let semestr = years * 2 - (afterFeb ? 0 : 1) - kiblowanie;
+        document.getElementById('result').innerText = `Jesteś na ✨${semestr}✨ semestrze`;
         // 5 years expiration
-        Cookies.set(cookieName, date.getFullYear() - year, {expires: 1825});
+        Cookies.set(cookieStart, yearStart, {expires: 1825});
+        Cookies.set(cookieKiblowanie, data.get('kiblowanie'), {expires: 1825});
     };
-    // automatically smart select month
-    const m = date.getMonth();
-    // after February and before August
-    document.getElementById('r-' + ((m >= 2 && m < 6) ? 'after' : 'before')).checked = true;
+    const y = document.kulkulator.year;
+    // only allow current year if it's after August
+    y.max = currMonth > 7 ? currYear : currYear - 1;
+    y.min = currYear - 20;
 
     // automatically fill year if remembered
-    const c = Cookies.get(cookieName);
-    if (c !== undefined) {
-        document.querySelector('input[name=year]').value = date.getFullYear() - parseInt(c);
+    const c = Cookies.get(cookieStart);
+    const k = Cookies.get(cookieKiblowanie);
+    if (c !== undefined && k !== undefined) {
+        document.kulkulator.year.value = parseInt(c);
+        document.kulkulator.kiblowanie.value = parseInt(k);
         document.kulkulator.submit.click();
     }
     document.kulkulator.submit.classList.remove('hidden');

@@ -63,7 +63,7 @@ figure figcaption {
 .big-button {
     border-radius: 16px;
     border: 2px solid #808080;
-    font-size: 130%;
+    font-size: 1.2em;
     padding: 16px 32px;
     cursor: pointer;
 }

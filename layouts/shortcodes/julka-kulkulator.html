@@ -38,11 +38,12 @@
         // after February and before August
         let afterFeb = currMonth >= 2 && currMonth < 6;
         let kiblowanie = parseInt(data.get('kiblowanie'));
-        let semestr = years * 2 - (afterFeb ? 0 : 1) - (kiblowanie === undefined ? 0 : kiblowanie);
+        kiblowanie = isNaN(kiblowanie) ? 0 : kiblowanie;
+        let semestr = years * 2 - (afterFeb ? 0 : 1) - kiblowanie;
         document.getElementById('result').innerText = `Jesteś na ✨${semestr}✨ semestrze`;
         // 5 years expiration
         Cookies.set(cookieStart, yearStart, {expires: 1825});
-        Cookies.set(cookieKiblowanie, data.get('kiblowanie'), {expires: 1825});
+        Cookies.set(cookieKiblowanie, kiblowanie, {expires: 1825});
     };
     const y = document.kulkulator.year;
     // only allow current year if it's after August

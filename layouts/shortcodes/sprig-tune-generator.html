@@ -44,23 +44,20 @@
         const file = e.target.files[0];
         const reader = new FileReader();
         reader.onload = (e) => {
-            tracks = [];
             const midi = new Midi(e.target.result);
-            midi.tracks.forEach((track, i) => {
-                tracks.push('');
+            tracks = midi.tracks.map((track, i) => {
+                let line = '';
                 track.notes.forEach((note, index) => {
-                    var time = 0;
-                    if (track.notes.length > index + 1) {
-                        time = track.notes[index + 1].time - note.time;
-                    }
+                    // if it's not the last note, calculate the time between this note and the next one
+                    let time = (track.notes.length > index + 1) ? track.notes[index + 1].time - note.time : note.time;
                     time *= secondsToMilliseconds;
-                    let duration = note.duration * secondsToMilliseconds;
-                    if (index == 0) {
-                        // delay so we don't start all track same time if one has delay
-                        tracks[i] += `${note.time * secondsToMilliseconds},\n`;
+                    if (index === 0) {
+                        // at index 0 add some delay
+                        line += `${note.time * secondsToMilliseconds},\n`;
                     }
-                    tracks[i] += `${time}: ${note.name}^${duration},\n`;
+                    line += `${time}: ${note.name}^${note.duration * secondsToMilliseconds},\n`;
                 });
+                return line;
             })
 
             output.textContent = 'let tracks = [\n' + tracks.map((e) => 'tune`\n' + e).join('`,\n') + '`,\n];';

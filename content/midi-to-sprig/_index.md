@@ -33,3 +33,24 @@ let tracks = [ ...
 tracks.forEach((e) => playTune(e));
 // done! playing your music now!
 ```
+
+If you want to later stop the playback, do this:
+
+```javascript
+// two different songs from generator
+let song1 = [ ... ];
+let song2 = [ ... ];
+
+// array holding playback objects
+let playbacks = [];
+
+function stop() {
+    playbacks.forEach((e) => e.end());
+}
+
+function play(song) {
+    stop(); // stop whats currently playing
+    // put playback objects returned by playTune() into the array
+    playbacks = song.map((e) => playTune(e));
+}
+```

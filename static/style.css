@@ -54,6 +54,20 @@ figure figcaption {
     white-space: nowrap;
 }
 
+/* Take space but invisible/non-clickable
+   useful for hiding buttons when js is not loaded */
+.hidden {
+    visibility: hidden;
+}
+
+.big-button {
+    border-radius: 16px;
+    border: 2px solid #808080;
+    font-size: 130%;
+    padding: 16px 32px;
+    cursor: pointer;
+}
+
 pre.chroma {
     margin: 0px;
     padding: 16px;

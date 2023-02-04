@@ -63,7 +63,7 @@
     copy.onclick = () => {
         const output = document.getElementById('output');
         output.select();
-        output.setSelectionRange(0, 9999999); /* For mobile devices */
+        output.setSelectionRange(0, 2147483646); /* For mobile devices */
         navigator.clipboard.writeText(output.value)
             .then(() => {
                 console.log('Copied to clipboard');

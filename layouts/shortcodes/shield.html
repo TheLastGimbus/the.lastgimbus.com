@@ -1,0 +1,6 @@
+<a href="{{ .Get `href` }}">
+  <img 
+    {{ with (.Get `alt`) }}alt="{{ . }}"{{ end }}
+    src="https://img.shields.io{{ .Get `link` }}{{ with (.Get `style`)}}?style={{ . }}{{ end }}"
+  >
+</a>

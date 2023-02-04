@@ -10,4 +10,4 @@ draft: false
 
 {{< julka-kulkulator >}}
 
-basfdas
+> Kulkulator zapamięta ciasteczkiem 🍪 kiedy zacząłeś studia i wyświetli poprawny semestr jak znowu wpadniesz 😉

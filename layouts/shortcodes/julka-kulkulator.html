@@ -1,0 +1,54 @@
+<style>
+    input {
+        margin: 8px;
+    }
+
+    input[type=submit] {
+        border-radius: 16px;
+        border: 2px solid white;
+        font-size: 130%;
+        padding: 16px 32px;
+        cursor: pointer;
+    }
+
+    #result {
+        font-size: 200%;
+        font-weight: bold;
+    }
+</style>
+<form name="kulkulator" onsubmit="racuszek()">
+  Na którym roku jesteś?</br>
+  <input type="number" name="year" step="1" min="1" max="16" value="1"></br>
+  Czy jest przed/teraz luty, czy po lutym?</br>
+  <input type="radio" name="month" value="before" id="r-before">przed/w trakcie</br>
+  <input type="radio" name="month" value="after" id="r-after">po</br>
+  <input type="submit" name="submit" value="Sprawdź 🧮">
+</form>
+<p id="result">&nbsp;</p>
+<script src="/lib/js.cookie.min.js"></script>
+<script>
+    const date = new Date();
+
+    const cookieName = 'studentStartYear';
+
+    document.addEventListener('submit', function (event) {
+        event.preventDefault();
+        let data = new FormData(event.target);
+        let year = parseInt(data.get('year'));
+        let before = data.get('month') === 'before';
+        let semestr = year * 2 - (before ? 1 : 0);
+        document.getElementById('result').innerText = `Jesteś na ✨ ${semestr} ✨ semestrze`;
+        Cookies.set(cookieName, date.getFullYear() - year, {expires: 1825});
+    });
+    // automatically smart select month
+    const m = date.getMonth();
+    // after February and before August
+    document.getElementById('r-' + ((m >= 2 && m < 6) ? 'after' : 'before')).checked = true;
+
+    // automatically fill year if remembered
+    const c = Cookies.get(cookieName);
+    if (c !== undefined) {
+        document.querySelector('input[name=year]').value = date.getFullYear() - parseInt(c);
+        document.kulkulator.submit.click();
+    }
+</script>

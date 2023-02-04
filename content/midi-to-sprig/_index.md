@@ -1,5 +1,5 @@
 ---
-title: "Sprig Tune Generator"
+title: "MIDI-to-Sprig 🎶"
 date: 2023-02-04T16:18:22+01:00
 draft: false
 ---

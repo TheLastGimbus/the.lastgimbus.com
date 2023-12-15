@@ -8,14 +8,6 @@ Czyli zbiór moich przemyśleń, ala-recenzji, moich fav gier które siedzą w m
 
 W 99% gram teraz na Switchu, i tak też kieruje te notatki 🤷
 
-> **Legenda**
-> - ✅ - mam, fizycznie
-> - 🔢 - mam, cyfrowo
-> - 🌐 - jest tylko cyfrowo (prawdopodobnie nie mam)
-> - 💾 - jest fizycznie (prawdopodnie chce)
-> - 💩 - fizyczna werjsa ma downlaod required ([jaaaaapierdole](/jaaaaapierdole/))
-> - 📀 - jest *gdzieś* fizycznie, ale kosztuje w chuuuuj
-
 ## 😍MOJA ABSOLUTNIE LOVE LISTA😍
 Kolejnośc tutaj to jak szybko one mi przychodzą do głowy - czyli najprawdopodobniej, ile miałem lat jak w nie grałem :D
 ### Portal 2 💙🧡

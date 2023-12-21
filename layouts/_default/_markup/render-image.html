@@ -1,0 +1,4 @@
+{{ $img := . }}
+{{ with resources.Get .Destination }}
+    <img src="{{ .RelPermalink }}" alt="{{ $img.Text }}" {{ with $img.Title }} title="{{ . }}"{{ end }} />
+{{ end }}

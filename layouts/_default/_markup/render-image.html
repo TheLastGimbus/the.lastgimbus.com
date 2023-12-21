@@ -10,13 +10,15 @@
 
 <!-- support both images and videos-->
 {{ if eq .MediaType.MainType "image" }}
-<a href="{{ .RelPermalink }}">
-    <img
-            src="{{ .RelPermalink }}"
-            alt="{{ $img.Text }}"
-            {{ with $img.Title }} title="{{ . }}"{{ end }}
-    />
-</a>
+    {{ with .Resize (printf "%dx%d webp q75" .Width .Height) }}
+    <a href="{{ .RelPermalink }}">
+        <img
+                src="{{ .RelPermalink }}"
+                alt="{{ $img.Text }}"
+                {{ with $img.Title }} title="{{ . }}"{{ end }}
+        />
+    </a>
+    {{ end }}
 {{ else if eq .MediaType.MainType "video" }}
     <video controls>
         <source src="{{ .RelPermalink }}" type="{{ .MediaType }}" />

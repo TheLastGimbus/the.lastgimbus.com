@@ -6,8 +6,8 @@ draft: false
 
 # jaaaaapierdole
 
-![ja pierdole](/memes/ja-pierdole-spock.png)
+![ja pierdole](memes/ja-pierdole-spock.png)
 
-![ja pierdole](/memes/ja-pierdole-dzien-swira.png)
+![ja pierdole](memes/ja-pierdole-dzien-swira.png)
 
-![ja pierdole](/memes/ja-pierdole-jezus.png)
+![ja pierdole](memes/ja-pierdole-jezus.png)

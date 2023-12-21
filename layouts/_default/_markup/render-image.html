@@ -1,0 +1,31 @@
+{{ $img := . }}
+
+{{ if not (eq (.Page.Resources.Get .Destination) nil) }}
+    {{ .Page.Scratch.Set "res" (.Page.Resources.Get .Destination) }}
+{{ else }}
+    {{ .Page.Scratch.Set "res" (resources.Get .Destination )}}
+{{ end }}
+
+{{ with (.Page.Scratch.Get "res") }}
+
+<!-- support both images and videos-->
+{{ if eq .MediaType.MainType "image" }}
+    {{ with .Resize (printf "%dx%d webp q75" .Width .Height) }}
+    <a href="{{ .RelPermalink }}">
+        <img
+                src="{{ .RelPermalink }}"
+                alt="{{ $img.Text }}"
+                {{ with $img.Title }} title="{{ . }}"{{ end }}
+        />
+    </a>
+    {{ end }}
+{{ else if eq .MediaType.MainType "video" }}
+    <video controls>
+        <source src="{{ .RelPermalink }}" type="{{ .MediaType }}" />
+        Your browser does not support the video :(
+    </video>
+{{ else}}
+    <h1><b>SOMETHING BROKE</b></h1>
+{{ end }}
+
+{{ end }}

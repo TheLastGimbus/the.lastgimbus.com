@@ -10,7 +10,7 @@ Sprig is an awesome game console that you can get only by creating a game for it
 
 https://sprig.hackclub.com/
 
-<img src="https://user-images.githubusercontent.com/27078897/186769641-5b1181b4-9969-4276-9fa0-9f15140e4a9b.jpg" width="350px" height="217px">
+![](https://user-images.githubusercontent.com/27078897/186769641-5b1181b4-9969-4276-9fa0-9f15140e4a9b.jpg)
 
 It comes with ultra-simple JavaScript game engine which allows you to start gaming very fast!
 

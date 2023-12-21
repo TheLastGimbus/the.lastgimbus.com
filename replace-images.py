@@ -19,8 +19,12 @@ for img in imgs:
     pattern = re.compile(r'src="(.*?)"')
     src = pattern.findall(img)[0]
     # find alt
+    # don't cry if it's lacking
     pattern = re.compile(r'alt="(.*?)"')
-    alt = pattern.findall(img)[0]
+    try:
+        alt = pattern.findall(img)[0]
+    except:
+        alt = ''
     # replace
     text = text.replace(img, '![{0}]({1})'.format(alt, src))
 

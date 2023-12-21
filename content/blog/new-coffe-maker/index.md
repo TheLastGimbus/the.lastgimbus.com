@@ -20,10 +20,10 @@ I have had it for over a week, and I use it every day! However, I already notice
 
 After all, I think it was made for offices and other places with crowds of coffe-addicts - not ordinary people. That said, I find enjoyment while using it, and do not regret 🥰
 
-<figure>
-  <img src="me-with-malwina.jpg" alt="Me with my coffe maker" width="350px">
-  <figcaption>Me with the machine</figcaption>
-</figure>
+
+![Me with my coffe maker](me-with-malwina.jpg)
+
+Me with the machine
 
 Now, I'm thinking of buying a coffe grinder, so I can get the best of coffe world ☕
 

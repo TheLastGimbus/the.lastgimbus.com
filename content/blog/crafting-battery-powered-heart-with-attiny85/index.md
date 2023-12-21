@@ -18,7 +18,7 @@ Main idea is - a pretty, flashy heart that's ment as a gift :)
 
 Besides being pretty and flashy, it would be awesome if it would also turn out :sparkles:useful:sparkles:
 
-<img src="final-result_off.jpg" alt="Final look of the heart - turned off" width="350px"> <img src="final-result_pink.jpg" alt="Final look of the heart - pink light" width="350px">
+![Final look of the heart - turned off](final-result_off.jpg) ![Final look of the heart - pink light](final-result_pink.jpg)
 
 ### What it will do
 I want it to work like a standard light/torch - you have a single button that you click to enable it, then it changes modes, then it turns off. From user perspective, this is blatantly simple. But form electrical/programming side, it may be a challenge.
@@ -36,29 +36,29 @@ The modes/functions:
 
    Actually, the brown ones turned out to be very fragile, and copper pads de-soldered *all the time*, so I finally used the green one:
 
-   <img src="banggood_5x7-pcb.webp" alt="Brown, cheap pcb prototype board" width="250px"> <img src="green-pcb.webp" alt="Green, stronger pcb prototype board" width="250px">
+   ![Brown, cheap pcb prototype board](banggood_5x7-pcb.webp) ![Green, stronger pcb prototype board](green-pcb.webp)
 
    ~~Double-sided green ones may be stronger, but would be a pain to solder since everything would touch the other side...~~ - i solved that by covering some parts with isolation tape
 
  - Battery will be taken care of by, beloved, TP4056 :heart:
 
-   <img src="tp4056.webp" alt="TP4056 li-ion battery charger" width="200px">
+   ![TP4056 li-ion battery charger](tp4056.webp)
 
    One thing I did, is replacing it's `R3` resistor with 10kOhm - this will limit the charging current to 130mA. This will be healthier for our battery. Check out this video: https://www.youtube.com/watch?v=6asCEBm4ZAw
 
-   <img src="tp4056_replaced-r3.webp" alt="TP4056 li-ion battery charger with replaced R3 resistor" width="300px">
+   ![TP4056 li-ion battery charger with replaced R3 resistor](tp4056_replaced-r3.webp)
    
    Oh, and I'll also de-solder the USB port, since Digispark already has it
 
  - LEDs of choice are, of course, WS2812. I'll use the strip instead of bear-bones SMD's - it will save some mess with soldering
  - :drum::drum::drum: and at the heart of everything, will be _**the**_ ATTiny85 - precisely, a Digispark board:
  
-   <img src="digispark.webp" alt="Digispark ATTiny85 usb board" width="250px">
+   ![Digispark ATTiny85 usb board](digispark.webp)
 
 After laying everything out, this is how it initially looks:
 
-<img src="initially-after-soldering_front.webp" alt="Initial look of the heart - front" width="400px">
-<img src="initially-after-soldering_back.webp" alt="Initial look of the heart - back" width="400px">
+![Initial look of the heart - front](initially-after-soldering_front.webp)
+![Initial look of the heart - back](initially-after-soldering_back.webp)
 
 ## Making it low-power
 ...this is the part for all "option-A-choosers"
@@ -79,7 +79,7 @@ Things from Digispark board that we can throw straight away - they waste power a
 
 There also is a 1KOhm pull-up resistor (R3 on schema) that keeps wasting power... but it's kinda required for USB communication... Solution? Solder it directly to USB-5V instead of VCC - this way it will only work with USB connected. Guy in this tutorial showed it nicely: https://www.instructables.com/Reducing-Battery-Power-Consumption-for-Digispark-A/ - but he suggests messing with a knife to cut the SMD resistor off (??) - I went ahead, de-soldered it altogether and used my own big ass THT one :relieved:
 
-<img src="desoldered-stuff-attiny85.webp" alt="Digispark ATTiny85 board with some modifications" width="350px">
+![Digispark ATTiny85 board with some modifications](desoldered-stuff-attiny85.webp)
 
 `1` was the R3 resistor. `2` was the diode that connected 5V from usb to VCC of the board. I de-soldered it too, and connected 5V to input of the charger and *my own* pull-up
 
@@ -92,13 +92,13 @@ This may not apply to you, but it turned out that WS2812's also drain power *whi
 
 Quite a lot of it, actually...
 
-<img src="ws2812-draining-while-off.webp" alt="WS2812 LEDs draining power while turned off" width="400px">
+![WS2812 LEDs draining power while turned off](ws2812-draining-while-off.webp)
 
 This :point_up: is 19-LEDs strip, draining 5.7mA (that's 0.3mA per LED) *while off*! My heart has 10 of those, so - consuming 0.3*10=3mA - with a 150mAh battery - it would go from 100% to 0 in 150/3/24 ~= 2 days - **while off**
 
 That's why I had to add small mosfet transistor to cut the power from LEDs:
 
-<img src="mosfet-for-leds.webp" alt="MOSFET transistor for disabling LEDs" width="350px">
+![MOSFET transistor for disabling LEDs](mosfet-for-leds.webp)
 
 ### Playing with bootloader
 While playing with deep sleep (more on that later), I discovered that ~50% wakes from it end up with reboot rather than back to my code - meaning, ATtiny does it's "6-second initial delay" thing
@@ -124,7 +124,9 @@ Then, open the terminal, and just run it: `./micronucleus upgrade-t85_jumper_bod
 > 
 > > But, as a precaution, you probably should try with some backup board first :wink:
 
-{{< video-gif src="instant-boot.webm" type="video/mp4" width="200px" caption="Tada :tada: boots _**instantly :100:**_">}}
+![instant boot](instant-boot.webm)
+
+Tada :tada: boots _**instantly :100:**_
 
 ### Saving power with code
 

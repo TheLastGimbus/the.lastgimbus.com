@@ -28,3 +28,6 @@ Me with the machine
 Now, I'm thinking of buying a coffe grinder, so I can get the best of coffe world ☕
 
 Anyway, that's all for now!
+
+### Okay, what the hell did I just read?
+So, we had a task on our English class to write a blog about recent gadget we bought - list it's qualities, etc. So I actually did it 😎

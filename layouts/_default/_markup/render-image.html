@@ -10,7 +10,13 @@
 
 <!-- support both images and videos-->
 {{ if eq .MediaType.MainType "image" }}
-    <img src="{{ .RelPermalink }}" alt="{{ $img.Text }}" {{ with $img.Title }} title="{{ . }}"{{ end }} />
+<a href="{{ .RelPermalink }}">
+    <img
+            src="{{ .RelPermalink }}"
+            alt="{{ $img.Text }}"
+            {{ with $img.Title }} title="{{ . }}"{{ end }}
+    />
+</a>
 {{ else if eq .MediaType.MainType "video" }}
     <video controls>
         <source src="{{ .RelPermalink }}" type="{{ .MediaType }}" />

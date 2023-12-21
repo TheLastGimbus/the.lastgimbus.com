@@ -6,8 +6,6 @@ draft: false
 
 Czyli zbiór moich przemyśleń, ala-recenzji, moich fav gier które siedzą w moim serduszku
 
-# Jaaaaa cie dupia
-
 W 99% gram teraz na Switchu, i tak też kieruje te notatki 🤷
 
 ## 😍MOJA ABSOLUTNIE LOVE LISTA😍

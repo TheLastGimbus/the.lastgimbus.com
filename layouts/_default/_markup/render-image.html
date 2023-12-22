@@ -1,6 +1,10 @@
 {{ $img := . }}
 
-{{ if not (eq (.Page.Resources.Get .Destination) nil) }}
+<!-- quick workaround for remote -->
+<!-- note that this is a bit shitty -->
+{{ if or (hasPrefix .Destination "https://") (hasPrefix .Destination "http://") }}
+    {{ .Page.Scratch.Set "res" (resources.GetRemote .Destination )}}
+{{ else if not (eq (.Page.Resources.Get .Destination) nil) }}
     {{ .Page.Scratch.Set "res" (.Page.Resources.Get .Destination) }}
 {{ else }}
     {{ .Page.Scratch.Set "res" (resources.Get .Destination )}}
@@ -10,6 +14,17 @@
 
 <!-- support both images and videos-->
 {{ if eq .MediaType.MainType "image" }}
+
+<!-- Jezus fucking christ really?? -->
+{{ if eq .MediaType.SubType "svg" }}
+    <a href="{{ .RelPermalink }}">
+        <img
+                src="{{ .RelPermalink }}"
+                alt="{{ $img.Text }}"
+                {{ with $img.Title }} title="{{ . }}"{{ end }}
+        />
+    </a>
+{{ else }}
     {{ with .Resize (printf "%dx%d webp q75" .Width .Height) }}
     <a href="{{ .RelPermalink }}">
         <img
@@ -19,6 +34,7 @@
         />
     </a>
     {{ end }}
+{{ end }}
 {{ else if eq .MediaType.MainType "video" }}
     <video controls>
         <source src="{{ .RelPermalink }}" type="{{ .MediaType }}" />

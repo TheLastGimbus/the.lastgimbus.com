@@ -1,10 +1,8 @@
 ---
 title: "FreeBuddy 🎧"
-date: 2022-08-31T23:55:59+02:00
+date: 2023-12-22T12:00:00+01:00
 draft: false
 ---
-
-# FreeBuddy 🎧
 
 A FOSS companion app for your headphones!
 
@@ -49,6 +47,6 @@ Also, freebuddy is already one step ahead of capitalism - it has a nice home wid
 
 All notes on inner workings, reverse-engineering guides live in [dev](dev)
 
-If you're interested in supporting more headphones, want to help, or just chat, feel invited to hop on Discord channel to:
+If you're interested in supporting more headphones, want to help, or just chat, feel invited to hop on Discord channel:
 
 [![Discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/fYS98UE5Cu)

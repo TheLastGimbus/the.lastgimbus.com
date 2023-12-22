@@ -50,3 +50,11 @@ All notes on inner workings, reverse-engineering guides live in [dev](dev)
 If you're interested in supporting more headphones, want to help, or just chat, feel invited to hop on Discord channel:
 
 [![Discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/fYS98UE5Cu)
+
+## Coffee ☕
+
+I've spent _**a lot**_ of time and love making this app 💖 if you like it, you can give me a tip 😇
+
+[![Donate using ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/A0A6HO71P)
+[![Donate using paypal](https://img.shields.io/badge/Donate-PayPal-blue.svg?logo=paypal&style=for-the-badge)](https://www.paypal.me/TheLastGimbus)
+[![Donate using Liberapay](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/TheLastGimbus/donate)

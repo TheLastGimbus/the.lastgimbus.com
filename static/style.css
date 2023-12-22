@@ -57,6 +57,13 @@ figure figcaption {
     padding: 0px;
 }
 
+table, th, td {
+  padding: 10px;
+  border-collapse: collapse;
+  border-width: 1px;
+  border-style: solid;
+}
+
 .nobreak {
     white-space: nowrap;
 }

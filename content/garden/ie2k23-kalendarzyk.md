@@ -19,7 +19,7 @@ Bracia elektronicy, siostry elektroniczki! Tutaj jest lista wszystkich ((obecnie
 - Wykład - 24.01 termin 0 -> termin 1 31.01 -> 05.02 popr 
 #### 🍺 Anal matematyczny W/C
 - Wykłady - (**To jest tylko dla frajerów co nie dostaną przepisu**) - 07.02 -> 14.02 popr
-- Ćwiczenia - 01.02 kolos
+- Ćwiczenia - 01.02
 #### ⚡ FPE - C
 - Wykład - Putek musi ogarnąć
 - Ćwiczenia:

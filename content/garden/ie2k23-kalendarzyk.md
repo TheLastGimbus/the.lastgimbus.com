@@ -28,8 +28,7 @@ Bracia elektronicy, siostry elektroniczki! Tutaj jest lista wszystkich ((obecnie
     - Na następnych zajęciach kartkówka z prawa gausa
 #### 🏹 Fizyka - W/C
 - Wykład - 05.02 -> 12.02 popr
-- Ćwiczenia:
-    - Na razie nic
+- Ćwiczenia - 22.01 -> 29.01 popr
 #### 📏 Metrologia - W/C
 - Wykłady - 26.01 - **źle napisane/jeszcze nie wiadomo??**
 - Ćwiczenia - 06.02 **WSZYSCY**

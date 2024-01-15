@@ -30,7 +30,7 @@ Bracia elektronicy, siostry elektroniczki! Tutaj jest lista wszystkich ((obecnie
 - Wykład - 05.02 -> 12.02 popr
 - Ćwiczenia - 22.01 -> 29.01 popr
 #### 📏 Metrologia - W/C
-- Wykłady - 26.01 - **źle napisane/jeszcze nie wiadomo??**
+- Wykłady - 08.02 9:15 (sala 201 w C-1) -> 2termin 19.02 9:15 (też 201 w C-1)
 - Ćwiczenia - **WSZYSTKIE GRUPY** 06.02 13:15 (sala 201 w C-2) -> popr 15.02 13:15 (też 201 C-2)
     - 16.01 kartkówka (tylko ja)
 #### 🌐 Podstawy sieci - W/L

@@ -21,7 +21,7 @@ Bracia elektronicy, siostry elektroniczki! Tutaj jest lista wszystkich ((obecnie
 - Wykłady - (**To jest tylko dla frajerów co nie dostaną przepisu**) - 07.02 -> 14.02 popr
 - Ćwiczenia - 01.02
 #### ⚡ FPE - C
-- Wykład - Putek musi ogarnąć
+- Wykład - 01.02 13:15-14:00 (sala 201/203 w C-1) -> popr do ustalenia
 - Ćwiczenia:
     - jak sie ma min 50% pkt to sie zalicza w przedterminie
         - jak nie to piszesz kolokwium na ostatnich zajęciach (60min 4zadanka)

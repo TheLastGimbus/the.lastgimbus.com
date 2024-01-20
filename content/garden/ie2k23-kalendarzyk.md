@@ -15,6 +15,7 @@ Bracia elektronicy, siostry elektroniczki! Tutaj jest lista wszystkich ((obecnie
 - pozaliczać projekty
 #### 😇 Etyka - W
 - Wykład - 25.01
+	- Materiały na ePortalu (więcej pojawi sie 25.01)
 #### 💾 Tech inf - W/L
 - Wykład - 24.01 termin 0 -> termin 1 31.01 -> 05.02 popr 
 #### 🍺 Anal matematyczny W/C

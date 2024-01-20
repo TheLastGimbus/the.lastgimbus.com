@@ -25,7 +25,7 @@ Bracia elektronicy, siostry elektroniczki! Tutaj jest lista wszystkich ((obecnie
 - Ćwiczenia:
     - jak sie ma min 50% pkt to sie zalicza w przedterminie
         - jak nie to piszesz kolokwium na ostatnich zajęciach (60min 4zadanka)
-    - Na następnych zajęciach kartkówka z prawa gausa
+    - Na następnych zajęciach kartkówka z potencjałowej metody superpozycji wyznaczania napięcia U_AB (zadania 1-2) z listy nr 3
 #### 🏹 Fizyka - W/C
 - Wykład - 05.02 -> 12.02 popr
 - Ćwiczenia - 22.01 -> 29.01 popr

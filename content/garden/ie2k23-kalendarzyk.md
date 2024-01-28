@@ -38,6 +38,7 @@ Bracia elektronicy, siostry elektroniczki! Tutaj jest lista wszystkich ((obecnie
 - Wykłady - 17.01
 > 1. grupa 1 - osoby z nazwiskiem rozpoczynającym się na literę od A do L - kolokwium zacznie się o 9.15 i będzie trwało do 10.00
 > 2. **grupa 2** - osoby z nazwiskiem rozpoczynającym się na literę od M do Z - kolokwium zacznie się o **10:15** i będzie trwało do 11.
-
+ 
+ - -> 02.02 13:15 (sala 102) popr 
 
 

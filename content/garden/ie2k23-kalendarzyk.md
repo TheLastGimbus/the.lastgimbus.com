@@ -6,18 +6,13 @@ draft: false
 
 Bracia elektronicy, siostry elektroniczki! Tutaj jest lista wszystkich ((obecnie znanych)) terminów zaliczeń rzeczy 🎉
 
-Brakuje godzin:
-- algebra
-- tech inf
-- analiza
-
 
 #### 📐 Algebra z geometria W/C
-- Wykład - 09.02 -> 16.02 popr
+- Wykład - 09.02 12:00 (sala 28[Sydor]/29[Marczak] w D-1) -> 16.02 popr
 #### 💾 Tech inf - W/L
-- Wykład - 05.02 popr 
+- Wykład - potencjalnie poprawa kartkówki w środę (7.02) o godzinie 10:45 na ulicy Długiej 63, budynek M11, pokój 145 (dostęp windą).
 #### 🍺 Anal matematyczny W/C
-- Wykłady - 07.02 -> 14.02 popr
+- Wykłady - 07.02 8:00 (sala 301 w D-1) (zgłosić sie mailowo) -> 14.02 popr
 	- Na 6️⃣celującą - 07.02 16:00-19:00 (sala 1.27 w C-13)
 #### ⚡ FPE - C
 - Wykład - popr do ustalenia

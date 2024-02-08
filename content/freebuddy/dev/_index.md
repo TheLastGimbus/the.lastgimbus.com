@@ -38,7 +38,7 @@ For now, all freebuddy models use bt classic - but there is plantey more resourc
 You may find yourself asking "okay, I have found *some* `5a0006002b040201003171` - what the hell does it mean??". Well, that's the "computer science basics" that I've wrtitten above. These guides will help on specific quircks of freebuddy, but general stuff like how to read hex data, I encourage you to go online because there's infinite amount of awesome blogs, tools, and conference talks about it 💝
 
 ### ...okay fineee, I will tell you 🙄
-`5a000600...` is some number in [https://simple.wikipedia.org/wiki/Hexadecimal](hexadecimal). How we know this? It has some numbers and letters, but letters are only from A to F, so it's pretty obvious 👀
+`5a000600...` is some number in [hexadecimal](https://simple.wikipedia.org/wiki/Hexadecimal). How we know this? It has some numbers and letters, but letters are only from A to F, so it's pretty obvious 👀
 
 Then, we can try to boil it down by assuming that it is a series of bytes - that is, `5a0006` means `[90, 0, 6]` and not `5a00 => 368646`. Why? Because we're using a computer. Computers talk in bytes. And programmers do too.
 

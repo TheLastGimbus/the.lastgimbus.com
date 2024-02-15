@@ -9,8 +9,6 @@ Bracia elektronicy, siostry elektroniczki! Tutaj jest lista wszystkich ((obecnie
 
 #### 📐 Algebra z geometria W/C
 - Wykład - 16.02 popr  (sala 28[Sydor]/29[Marczak] w D-1)
-#### 🍺 Anal matematyczny W/C
-- Wykłady - 14.02 8:00 (sala 1.28 w C-13) (zgłosić sie mailowo) popr
 #### ⚡ FPE - C
 - Wykład - 16.02 15:00 (sala 201 w C-2)
 - Ćwiczenia - 16.02 16:00 (sala 201 w C-2)

@@ -7,13 +7,15 @@ draft: false
 Bracia elektronicy, siostry elektroniczki! Tutaj jest lista wszystkich ((obecnie znanych)) terminów zaliczeń rzeczy 🎉
 
 
-#### 📐 Algebra z geometria W/C
-- Wykład - 16.02 popr  (sala 28[Sydor]/29[Marczak] w D-1)
-#### ⚡ FPE - C
-- Wykład - 16.02 15:00 (sala 201 w C-2)
-- Ćwiczenia - 16.02 16:00 (sala 201 w C-2)
-#### 📏 Metrologia - W/C
-- Wykłady - 2termin 19.02 9:15 (sala 201 w C-1)
-- Ćwiczenia - **WSZYSTKIE GRUPY** popr 15.02 13:15 (sala 201 w C-2)
+
+## Zapisy na nowe przedmiociki 💅 21.02
+Po kolei tury:
+- 08:15 - 09:50
+- 10:15 - 11:50
+- 12:15 - 13:50
+- 14:15 - 15:50
+> A na której turze ja jestem?
+
+Nie wiem :) i nie wiem od czego to zależy. Ale oto godzinki
 
 

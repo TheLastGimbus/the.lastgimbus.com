@@ -101,6 +101,4 @@ This is the most demanding part, but reading already-known stuff will help you b
 - [previously mentioned davidv.dev blog](https://blog.davidv.dev/reverse-engineering-the-bose-qc35-bluetooth-protocol.html)
 
 ## Actually implementing in the app 📱
-**In construction 🏗️👨‍🏭**
-
-Right now, freebuddy is going thorugh a **big** refactor that will make this very simple, if you only know Dart. Once that done, i will write about it 😁
+Comments, notes, documentation, and READMEs are all around the codebase - get yourself comfortable there and you'll figure it out - [lib/README.md] and [lib/headphones/README.md] are a good start 👍👍

@@ -12,7 +12,11 @@ draft: false
 
 Eduroam korzysta z jakiegoś fiku miku enterprise systemu, gdzie potrzeba mieć fikuśny certyfikat. [Kliknij sobie tu żeby go pobrać ⭐](ca.pem). W dodatku (przynajmniej ten na PWr'ze) korzysta ze 🎉starego🎉 TLS, który jest już wyłączony domyślnie w Linuxach - włączymy go spowrotem 👍
 
-1. Spróbuj sie połączyć do Eduroama normalnie, jak na codzień sie łączysz do rzeczy (w Gnomie czy tam KDE) (oczywiście nie zadziała) - pozaznaczaj te opcje (że Tunneled TLS i PAP) i login hasło jak do ePortalu:
+1. Spróbuj sie połączyć do Eduroama normalnie, jak na codzień sie łączysz do rzeczy (w Gnomie czy tam KDE) (oczywiście nie zadziała) 
+	- pozaznaczaj te opcje (że Tunneled TLS i PAP)
+	- login hasło jak do ePortalu
+	- CA Certificate - ten `ca.pem` ode mnie:
+
 	![](gnome-screenshot.png)
 
 2. Odpal to w terminalu żeby włączyć starego TLSa:

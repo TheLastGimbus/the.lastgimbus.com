@@ -3,6 +3,7 @@ title: "Internet na Dwernik 6"
 date: 2024-05-20T15:30:00+02:00
 draft: false
 ---
+# Jak działa internet na Dwernik 6
 
 Na gospodarstwie mamy cztery domy, i każdy z nich ma swój ruter. Ponad to, mamy kilka czujników (temperatury w Bajeczce itp), które działają po LANie - dlatego też całość jest ustawiona dość niestandardowo, co ten oto dokument opisuje :)
 

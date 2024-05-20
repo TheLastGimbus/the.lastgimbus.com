@@ -7,7 +7,7 @@ draft: false
 
 Na gospodarstwie mamy cztery domy, i każdy z nich ma swój ruter. Ponad to, mamy kilka czujników (temperatury w Bajeczce itp), które działają po LANie - dlatego też całość jest ustawiona dość niestandardowo, co ten oto dokument opisuje :)
 
-![[siec-domowa.drawio.png]]
+![](siec-domowa.drawio.png)
 ## 0. Nazewnictwo
 
 Żeby była jasność który dom jest który itp - będą dalej nazywane tak i **tylko tak**.
@@ -67,7 +67,7 @@ Archer jest **jedynym** ruterem który ma włączony serwer DHCP, wiec to on dyk
 Nazwa: MASZ_5G
 Hasło: agnieszkatumieszka
 
-![[maszt5g.png]]
+![](maszt5g.png)
 
 Ma jeszcze dodatkowe otwarte WiFi dla gości, "Pokoje u Agnieszki", które jest odizolowane od reszty LANu. Była taka łatwa opcja w ustawieniach to kliknąłem, ale to nie jest jakieś bardzo istotne.
 ##### DMZ
@@ -99,7 +99,7 @@ DHCP wyłączone ❌
 ##### WiFi
 Nazwa: Bajeczka
 Hasło: Bajeczka6
-![[bajeczka.png]]
+![](bajeczka.png)
 
 ### 3.4 Dolny dom
 W dolnym domu jest ruter "D-Link DWR-921 (c3)", który też nadaje WiFi i jest wpięty do LANu
@@ -114,7 +114,7 @@ DHCP wyłączone ❌
 ##### WiFi
 Nazwa: MASZT_6G
 Hasło: agnieszkatumieszka
-![[maszt6g.png]]
+![](maszt6g.png)
 
 ## 4. Inne ważniejsze urządzonka
 - Niebiesko-pomarańczowy serwer w górnym domu - 192.168.1.242

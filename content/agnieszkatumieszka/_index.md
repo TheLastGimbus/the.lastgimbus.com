@@ -79,7 +79,12 @@ W domu babci jest osobno:
 - biały switch TP-Link który nie ma żadnej konfiguracji i przesyła wszystko jak leci
 - czarny access point który nadaje wifi linksys-cośtam.
 
-Do białego switcha powinny być wpięte 4 kable: jeden z internetem z górnego domu, jeden do access pointa, jeden idący do bajeczki i jeden do komputera dziadka
+#### Kabelki
+Do białego switcha powinny być wpięte 4 kable: 
+- z internetem z górnego domu
+- do access pointa
+- idący do bajeczki
+- i do komputera dziadka
 
 #### Konfiguracja
 IP: Brak

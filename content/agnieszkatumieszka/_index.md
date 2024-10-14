@@ -7,7 +7,7 @@ draft: false
 
 Na gospodarstwie mamy cztery domy, i każdy z nich ma swój ruter. Ponad to, mamy kilka czujników (temperatury w Bajeczce itp), które działają po LANie - dlatego też całość jest ustawiona dość niestandardowo, co ten oto dokument opisuje :)
 
-![](siec-domowa.drawio.png)
+![](siec-domowa.png)
 ## 0. Nazewnictwo
 
 Żeby była jasność który dom jest który itp - będą dalej nazywane tak i **tylko tak**.
@@ -29,29 +29,36 @@ Dalej kabel ten idzie do białego walcowego pudełeczka wiszącego na ściane do
 
 > Zdarzały się incydenty, że kabel wiszący do babci uszkdził wiatr/ktoś - trzeba na to zwłaszca uważać, bo przez niego i tylko niego płynie internet dalej do świata, a żeby go naprawić prawdopodobnie będzie trzeba wzywać Orendża.
 
-To, jak on działa, co ustawić w ruterze itp będzie opisane dalej.
+To, jak orendż działa, co ustawić w ruterze itp będzie opisane dalej.
 
 ## 2. LAN, wewnętrzna sieć na gospodarstwie
 
 Tak jak mówiłem, mamy kilka smart-czujników rozsianych po gospodarstwie, i żeby to ładnie działało to **wszystkie** rutery muszą działać w jednym wspólnym LANie
 
-Żeby to uzyskać, wszystkie rutery poza głównym (w górnym domu) mają kable ethernet wpięte do jednego (dowolnego) z portów LAN - NIE do WAN!! Oraz wyłączony serwer DHCP.
+Żeby to uzyskać, wszystkie rutery poza głównym (w górnym domu) mają kable ethernet wpięte do jednego (dowolnego) z portów LAN✅ - NIE do WAN❌!! Oraz **wyłączony** serwer DHCP❌
 
 > Dlatego też jeśli po podłączeniu do któregoś WiFi długo pisze "Uzyskiwanie adresu IP", a potem sie rozłącza, to znaczy że nie ma połączenia z głównym ruterem który by to IP rozdał
-## 3. Rutery - gdzie są, co robią
 
-### 3.1 Górny dom
+## 3. WiFi
+
+**Wszystkie** rutery mają wifi "Dwernik6" bez hasła. Trzeba kliknąć w telefon tylko raz i ma sie zasięg na całym gospodarstwie.
+
+## 4. Rutery - gdzie są, co robią
+
+### 4.1 Górny dom 🏠
 W górnym domu jest główny ruter, "TP-Link Archer VR400", który odbiera internet od Orange i rozdaje go wszystkim innym. Jest on bardzo ważny, bez niego nikt inny ani nie ma internetu ani LANu. Ma też dość duże obciążenie, bo musi obsłużyć dziesiątki urządzeń ze wszystkich domów, więc jeśli komuś kiedyś przyszłoby do głowy "tak po prostu" zmienić go na inny losowy ruter ze strychu to odradzam, bo jak na razie radził sobie z tym bardzo dobrze.
 
-#### Kabelki
-
-Do portów LAN powinny być wpięte 3 kable:
-- krótki szarawy idący do niebiesko-pomarańczowego urządzenia na parapecie
+Do portów LAN powinny być wpięte conajmniej 2 kable:
 - duży gruby czarny, który idzie do domu na dole
 - drugi duży gruby czarny, który idzie do babci
-#### Konfiguracja
-IP: 192.168.1.1
-#####  Internet
+
+Ustawienia:
+- IP: 192.168.1.1
+- login: `admin`
+- haslo: `b$DQ2@YZs9j&ob$m4Qp@*VWU`
+
+Archer jest **jedynym** ruterem który ma włączony serwer DHCP, wiec to on dyktuje adresy IP wszystkim. Z tego co pamiętam to ma po prostu ustawione 192.168.1.X, od 10 do 200, maska normalna 24 (255.255.255.0) (wszystko inne wszędzie ma też normalnie 24).
+
 Internet idzie po białmym kablu, i używa protokołu PPPoA, z takimi ustaiweniami:
 ```
 vpi - 0
@@ -60,68 +67,37 @@ VC/MUX
 CHAP
 ```
 Z tego co pamiętam to tyle - nie ma tam żadnych innych haseł loginów ani nic, po prostu ustawić to, wpiąć i powinien być. Znaczy, czasami nie ma, ale to już Orange :)
-##### LAN
-Archer jest **jedynym** ruterem który ma włączony serwer DHCP, wiec to on dyktuje adresy IP wszystkim. Z tego co pamiętam to ma po prostu ustawione 192.168.1.X, od 10 do 200, maska normalna 24 (255.255.255.0) (wszystko inne wszędzie ma też normalnie 24).
 
-##### WiFi
-Nazwa: MASZ_5G
-Hasło: agnieszkatumieszka
-
-![](maszt5g.png)
-
-Ma jeszcze dodatkowe otwarte WiFi dla gości, "Pokoje u Agnieszki", które jest odizolowane od reszty LANu. Była taka łatwa opcja w ustawieniach to kliknąłem, ale to nie jest jakieś bardzo istotne.
-##### DMZ
-Dodatkowo żeby otworzyć dostęp do niebiesko-pomarańczowego urządzonka które jest serwerem, jest na jego porcie ustawione DMZ które przekierowuje wszystkie zapytania z internetu właśnie do niego. To jest dość ważne. IP tego serwera to 192.168.1.242
-
-### 3.2 Dom babci
+### 4.2 Dom babci 👵
 
 W domu babci jest osobno:
 - biały switch TP-Link który nie ma żadnej konfiguracji i przesyła wszystko jak leci
-- czarny access point który nadaje wifi linksys-cośtam.
+	- IP: brak
+	- Wpięte 4 kabelki:
+		- z internetem z górnego domu
+		- do access pointa
+		- idący do bajeczki
+		- i do komputera dziadka
+- czarny access point który nadaje wifi linksys-cośtam
+	- IP: 192.168.1.7
+	- login: -pusty-
+	- hasło: `6whRmrQvYm2G`
 
-#### Kabelki
-Do białego switcha powinny być wpięte 4 kable: 
-- z internetem z górnego domu
-- do access pointa
-- idący do bajeczki
-- i do komputera dziadka
 
-#### Konfiguracja
-IP: Brak
-##### WiFi
-Nazwa: linksys-cośtam
-Hasło: Krysienka9
+### 4.3 Bajeczka 🌈
 
-### 3.3 Bajeczka
+"TP-Link TL-WR740N"
 
-W Bajeczce jest ruter "TP-Link jakiśtam", który nadaje WiFi i ma być wpięty do LANu
+Ustawienia:
+- IP: 192.168.1.5
+- login: `admin`
+- hasło: `tjnL3dYZTyv9B7`
+	- (obecnie został zresetowany, i jest `admin:admin`)
 
-#### Konfiguracja
-IP: 192.168.1.5
+### 4.4 Dolny dom 🏡
+"D-Link DWR-921 (c3)" z OpenWrt
 
-DHCP wyłączone ❌
-
-##### WiFi
-Nazwa: Bajeczka
-Hasło: Bajeczka6
-![](bajeczka.png)
-
-### 3.4 Dolny dom
-W dolnym domu jest ruter "D-Link DWR-921 (c3)", który też nadaje WiFi i jest wpięty do LANu
-
-Jest na nim zainstalowane OpenWrt
-
-#### Konfiguracja
-IP: 192.168.1.2
-
-DHCP wyłączone ❌
-
-##### WiFi
-Nazwa: MASZT_6G
-Hasło: agnieszkatumieszka
-![](maszt6g.png)
-
-## 4. Inne ważniejsze urządzonka
-- Niebiesko-pomarańczowy serwer w górnym domu - 192.168.1.242
-- Miernik prądu - 192.168.1.171
-- Czujnik wody w studni - 192.168.1.168
+Ustawienia:
+- IP: 192.168.1.2
+- login: `root`
+- hasło: `LM#BP6G9K&UwjE#Ufzv$8K2^`

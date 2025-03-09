@@ -6,7 +6,7 @@ draft: false
 
 Ahoj přatele, ahoj kamaradký,  
 poslouchajte prosím moje pohádky:  
-Jsem Mateuš, a bude vas prosít  
+Jsem Mateuš, a budu vas prosít  
 abym na vaše univerzitu mohl nastoupit  
 
 Jsem Mateuš, a studuju na Wroclawské Politechniku,  

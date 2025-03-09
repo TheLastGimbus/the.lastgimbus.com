@@ -6,10 +6,10 @@ draft: false
 
 Ahoj přatele, ahoj kamaradký,
 poslouchajte prosím moje pohádky:
-Jsem Mateuši, a bude vas prosít
+Jsem Mateuš, a bude vas prosít
 abym na vaše univerzitu mohl nastoupit
 
-Jsem Mateuši, a studuju na Wroclawské Politechniku,
+Jsem Mateuš, a studuju na Wroclawské Politechniku,
 ale měl jsem moc rád hranolky a knedlyku!
 Tak Filologie Českou na univerzite taky studuju,
 Přatel řika - "ty jsi blázen" - ale ja mam to w chuju ;)

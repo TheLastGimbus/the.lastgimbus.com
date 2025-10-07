@@ -6,16 +6,18 @@ draft: false
 
 # ✨Jak sie podłączyć do Eduroam'a na PWr *na Linuxie 🐧*
 
+2025 updated 🎉
+
 > Mój setup to Arch + Gnome + NetworkManager, ale generalnie powinno działać u każdego z NetworkManagerem (czyli, w zasadzie u każdego w dzisiejszych czasach)
 > 
 > (Tak, jak masz Ubuntu/Minta/PopOSa to też) 👍
 
-Eduroam korzysta z jakiegoś fiku miku enterprise systemu, gdzie potrzeba mieć fikuśny certyfikat. [Kliknij sobie tu żeby go pobrać ⭐](ca.pem). W dodatku (przynajmniej ten na PWr'ze) korzysta ze 🎉starego🎉 TLS, który jest już wyłączony domyślnie w Linuxach - włączymy go spowrotem 👍
+Eduroam korzysta z jakiegoś fiku miku enterprise systemu, gdzie potrzeba mieć fikuśny certyfikat. [Kliknij sobie tu żeby go pobrać ⭐](pwr-eduroam-cert.pem). W dodatku (przynajmniej ten na PWr'ze) korzysta ze 🎉starego🎉 TLS, który jest już wyłączony domyślnie w Linuxach - włączymy go spowrotem 👍
 
 1. Spróbuj sie połączyć do Eduroama normalnie, jak na codzień sie łączysz do rzeczy (w Gnomie czy tam KDE) (oczywiście nie zadziała) 
 	- pozaznaczaj te opcje (że Tunneled TLS i PAP)
 	- login hasło jak do ePortalu
-	- CA Certificate - ten `ca.pem` ode mnie:
+	- CA Certificate - ten `pwr-eduroam-cert.pem` ode mnie:
 
 	![](gnome-screenshot.png)
 

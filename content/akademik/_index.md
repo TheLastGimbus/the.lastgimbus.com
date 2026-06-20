@@ -18,8 +18,6 @@ Jestem git z **chłopami♂️, babami♀️, non-binary⚧️**, i każdym w za
 
 Jeśli stwierdzisz że w sumie brzmi spoko i chciałxbyś sie poznać i obczaić temat, to śmiało napisz do mnie na **numer telefonu z plakatu**, messenger "**Na Pewno Nie Mati**" jeśli znalazłeś na fejsbuku, albo mejla na 282935 \[at\] student.pwr.edu.pl
 
-![Zdjęcie plakatu](akademik-lokator-plakat_no-phone.webp)
-
 ## 👨‍🎤 Kto to Mati
 
 Oto bullet pointy kim jestem i co robie w życiu:
@@ -104,8 +102,6 @@ I live in **T-19**, and I've chosen it for the next semester - **if you live in 
 I'm cool with **guys♂️, girls♀️, non-binary folks⚧️**, and basically anyone, of any age 🤹
 
 > (yes, you can mixe genders in dorms - it's not a big deal 🙈)
-
-![Zdjęcie plakatu](akademik-lokator-plakat_no-phone.webp)
 
 If you think this sounds cool and you'd like to meet up and check it out, feel free to text me at the **phone number on the poster**, or email me at 282935 \[at\] student.pwr.edu.pl
 

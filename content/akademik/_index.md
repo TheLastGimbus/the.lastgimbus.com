@@ -4,7 +4,7 @@ date: 2023-02-04T16:18:22+01:00
 draft: false
 ---
 
-(english version below)
+> (🇬🇧 English version below)
 
 Siema 👋 cieszy mnie że tu zaglądasz!
 
@@ -12,7 +12,7 @@ Jak już pewnie wiesz, szukam współlokatora/ki/x do akademika - poniżej rozpi
 
 ## Kto to Mati
 
-Wymienie ci w bullet pointach jaki jestem i co robie w życiu żebyś czytać za dużo nie musiał
+Wypisze w bullet pointach jaki jestem i co robie w życiu co byś czytać za dużo nie musiał
 
 Studia:
 - ⚡ Studiuje 3 rok elektroniki na Polibudzie 
@@ -28,9 +28,8 @@ Moje zajawki:
 
 Mój charakter - jestem bardzo...
 - społeczny - lubie poznawać nowych ludzi, i współpracować z nimi
-- cośtam (zaraz wymyśle)
+- ADHD - non stop gdzieś zapierdalam albo coś kombinuje - trudno ze mną "po prostu wyjść na spacer"
 - empatyczny - jeśli wrócisz kiedyś zapłakany do pokoju to na pewno rzuce w ciebie lodami na pocieszenie
-
 
 ## Jak sie ze mną mieszka
 

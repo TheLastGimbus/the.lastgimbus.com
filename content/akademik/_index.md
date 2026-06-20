@@ -16,19 +16,19 @@ Jeśli stwierdzisz że w sumie brzmi spoko i chciałxbyś sie poznać i obczai
 
 Wypisze w bullet pointach jaki jestem i co robie w życiu co byś czytać za dużo nie musiał
 
-Studia:
+### Studia:
 - ⚡ Studiuje 3 rok elektroniki na Polibudzie 
   - 🎓 W nadchodzącym semie zimiowym mam inżynierke, ale planuje dalej zostać na magistra
 - 🤹 Wkręcam się w dużo dodatkowych rzeczy na uczelni
 - 🇨🇿 Studiowałem przez rok filologie czeską z nudów :P
 
-Moje zajawki:
+### Moje zajawki:
 - 🛶 Kajakarstwo górskie - wokół niego obraca sie połowa mojego życia i musisz być gotowy że czasem przyniose wiosło do pokoju
 - 🧗 Ścianka wspinaczkowa - w skałach też
 - 📻 Radio LUZ - jestem tam w redakcji newsowej
 - ...dużo, za dużo innych
 
-Mój charakter - jestem bardzo...
+### Mój charakter - jestem bardzo...
 - społeczny - lubie poznawać nowych ludzi, i współpracować z nimi
 - ADHD - non stop gdzieś zapierdalam albo coś kombinuje - trudno ze mną "po prostu wyjść na spacer"
 - empatyczny - jeśli wrócisz kiedyś zapłakany do pokoju to na pewno rzuce w ciebie lodami na pocieszenie

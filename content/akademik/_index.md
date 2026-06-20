@@ -18,6 +18,8 @@ Jestem git z **chłopami♂️, babami♀️, non-binary⚧️**, i każdym w za
 
 Jeśli stwierdzisz że w sumie brzmi spoko i chciałxbyś sie poznać i obczaić temat, to śmiało napisz do mnie na **numer telefonu z plakatu**, albo mejla na 282935 \[at\] student.pwr.edu.pl
 
+![Zdjęcie plakatu](akademik-lokator-plakat.webp)
+
 ## 👨‍🎤 Kto to Mati
 
 Oto bullet pointy kim jestem i co robie w życiu:

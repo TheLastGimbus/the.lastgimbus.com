@@ -16,9 +16,9 @@ Jestem git z **chłopami♂️, babami♀️, non-binary⚧️**, i każdym w za
 
 > (tak, w akademikach można mieszkać miaszano-płciowo - it's not a big deal 🙈)
 
-Jeśli stwierdzisz że w sumie brzmi spoko i chciałxbyś sie poznać i obczaić temat, to śmiało napisz do mnie na **numer telefonu z plakatu**, albo mejla na 282935 \[at\] student.pwr.edu.pl
+Jeśli stwierdzisz że w sumie brzmi spoko i chciałxbyś sie poznać i obczaić temat, to śmiało napisz do mnie na **numer telefonu z plakatu**, messenger "**Na Pewno Nie Mati**" jeśli znalazłeś na fejsbuku, albo mejla na 282935 \[at\] student.pwr.edu.pl
 
-![Zdjęcie plakatu](akademik-lokator-plakat.webp)
+![Zdjęcie plakatu](akademik-lokator-plakat_no-phone.webp)
 
 ## 👨‍🎤 Kto to Mati
 
@@ -105,6 +105,8 @@ I'm cool with **guys♂️, girls♀️, non-binary folks⚧️**, and basically
 
 > (yes, you can mixe genders in dorms - it's not a big deal 🙈)
 
+![Zdjęcie plakatu](akademik-lokator-plakat_no-phone.webp)
+
 If you think this sounds cool and you'd like to meet up and check it out, feel free to text me at the **phone number on the poster**, or email me at 282935 \[at\] student.pwr.edu.pl
 
 ## 👨‍🎤 Who is Mati
@@ -178,4 +180,4 @@ If you want to meet up and chat, stop by my place: **room 403 in T-19**
 
 If you're reading this during the summer break, I'm staying somewhere else in Wrocław for now - we can meet up somewhere in the city or just give me a call 🤙
 
-Text the **phone number from the poster**, or send an email to 282935 [at] student.pwr.edu.pl
+Text the **phone number from the poster**, messenger "**Na Pewno Nie Mati**" if you found this on facebook, or send an email to 282935 [at] student.pwr.edu.pl

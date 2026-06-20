@@ -4,9 +4,9 @@ date: 2023-02-04T16:18:22+01:00
 draft: false
 ---
 
-> (🇬🇧 English version below)
+# Siema 👋 cieszy mnie że tu zaglądasz!
 
-Siema 👋 cieszy mnie że tu zaglądasz!
+> (🇬🇧 English version below)
 
 Jak już pewnie wiesz, szukam współlokatora/ki/x do akademika - poniżej rozpisałem kim jestem, jak sie ze mną mieszka, i czemu warto!
 

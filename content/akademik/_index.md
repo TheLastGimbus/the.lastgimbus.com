@@ -10,7 +10,9 @@ Siema 👋 cieszy mnie że tu zaglądasz!
 
 Jak już pewnie wiesz, szukam współlokatora/ki/x do akademika - poniżej rozpisałem kim jestem, jak sie ze mną mieszka, i czemu warto!
 
-## Kto to Mati
+Jeśli stwierdzisz że w sumie brzmi spoko i chciałxbyś sie poznać i obczaić temat, to śmiało napisz do mnie na **numer telefonu z plakatu**, albo mejla na 282935 \[at\] student.pwr.edu.pl
+
+## 👨‍🎤 Kto to Mati
 
 Wypisze w bullet pointach jaki jestem i co robie w życiu co byś czytać za dużo nie musiał
 
@@ -31,7 +33,7 @@ Mój charakter - jestem bardzo...
 - ADHD - non stop gdzieś zapierdalam albo coś kombinuje - trudno ze mną "po prostu wyjść na spacer"
 - empatyczny - jeśli wrócisz kiedyś zapłakany do pokoju to na pewno rzuce w ciebie lodami na pocieszenie
 
-## Jak sie ze mną mieszka
+## 👪 Jak sie ze mną mieszka
 
 Fajnie
 
